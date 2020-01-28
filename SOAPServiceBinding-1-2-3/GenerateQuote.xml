@@ -1,0 +1,1510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="77d526e6-e73d-418f-a908-caf89975c429" isOneWay="false" action="GenerateQuote" name="GenerateQuote" bindingOperationName="GenerateQuote" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0a115721-6d0d-4006-9ece-38d604d934dcfileName">GenerateQuote</con:setting>
+    <con:setting id="77d526e6-e73d-418f-a908-caf89975c429fileName">GenerateQuote</con:setting>
+  </con:settings>
+  <con:call id="1dfa6a65-2cf8-4108-97b4-5462ea69d59a" name="u17">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0124v:18047/SOAPServiceBinding/BSROS_GenerateQuote_RNL/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL_2" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2" xmlns:mem="http://www.theaa.com/CommonServices/Data/Membership.2" xmlns:veh="http://www.theaa.com/CommonServices/Data/General/Vehicle">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <gen:GenerateQuoteRequest>\r
+         <mes:RequestHeader>\r
+            <mes:TransactionId>RNLQ-1802-197</mes:TransactionId>\r
+            <mes:Version>1.0</mes:Version>\r
+            <mes:RequestDateTime>2019-10-24T00:00:00</mes:RequestDateTime>\r
+            <mes:Source>\r
+               <mes:Domain>SALES</mes:Domain>\r
+               <mes:Channel>INBC</mes:Channel>\r
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>\r
+               <mes:Name>Pega</mes:Name>\r
+            </mes:Source>\r
+         </mes:RequestHeader>\r
+         <gen:CurrentFlexDetails>\r
+            <prod:FlexFactorOnCurrentPolicy>1</prod:FlexFactorOnCurrentPolicy>\r
+         </gen:CurrentFlexDetails>\r
+         <gen:RenewalFlexDetails>\r
+            <prod:FlexFactor>0.7</prod:FlexFactor>\r
+            <prod:FlexFactorCalculatedFlag>true</prod:FlexFactorCalculatedFlag>\r
+         </gen:RenewalFlexDetails>\r
+         <gen:PaymentType>SAP</gen:PaymentType>\r
+         <gen:ProductList>\r
+            <prod:EffectivePriceDateTime>2019-10-24T00:00:00</prod:EffectivePriceDateTime>\r
+            <prod:PolicyStartDateTime>2019-10-24T00:00:00</prod:PolicyStartDateTime>\r
+            <prod:PolicyEndDateTime>2020-10-24T00:00:00</prod:PolicyEndDateTime>\r
+            <!--prod:OfferCodeDetailList>\r
+               <prod:OfferCodeDetail>\r
+                  <prod:OfferCode/>\r
+                  <prod:OfferCodeApplicationLevel>1</prod:OfferCodeApplicationLevel>\r
+               </prod:OfferCodeDetail>\r
+            </prod:OfferCodeDetailList-->\r
+            <prod:SourceGroup>15</prod:SourceGroup>\r
+            <prod:SourceCode>W1037</prod:SourceCode>\r
+            <prod:Currency>GBP</prod:Currency>\r
+            <gen:MembershipTenure>1</gen:MembershipTenure>\r
+            <gen:Product>\r
+               <prod:ProductCode>PRD_UK_0001</prod:ProductCode>\r
+            </gen:Product>\r
+            <gen:CoveredPersons>0</gen:CoveredPersons>\r
+         </gen:ProductList>\r
+         <gen:CustomerDetails>\r
+            <gen:Postcode>BA2 3RD</gen:Postcode>\r
+            <mem:MembershipNumber>6356011512658282</mem:MembershipNumber>\r
+         </gen:CustomerDetails>\r
+         <!--gen:RenewalRiskData>\r
+            <gen:CurrentPolicyDetails>\r
+               <gen:Product>\r
+                  <prod:ProductCode>PRD_UK_0001</prod:ProductCode>\r
+               </gen:Product>\r
+               <gen:PartialFreeMembershipFlag>false</gen:PartialFreeMembershipFlag>\r
+               <gen:RecordedPaymentType>RAP</gen:RecordedPaymentType>\r
+               <gen:RecordedPaymentMeans>DD</gen:RecordedPaymentMeans>\r
+            </gen:CurrentPolicyDetails>\r
+            <gen:InScopeFlexFlag>true</gen:InScopeFlexFlag>\r
+            <gen:OptInOfferFlag>true</gen:OptInOfferFlag>\r
+         </gen:RenewalRiskData-->\r
+      </gen:GenerateQuoteRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="a6a46431-d5f7-4c5c-9bc2-408abfe82531" name="Request 2">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://esbpreprod:18047/SOAPServiceBinding/BSROS_GenerateQuote_RNL/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL_2" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2" xmlns:mem="http://www.theaa.com/CommonServices/Data/Membership.2" xmlns:veh="http://www.theaa.com/CommonServices/Data/General/Vehicle">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gen:GenerateQuoteRequest>
+         <mes:RequestHeader>
+            <mes:TransactionId>RNLQ-1802-197</mes:TransactionId>
+            <mes:Version>1.0</mes:Version>
+            <mes:RequestDateTime>2019-10-24T00:00:00</mes:RequestDateTime>
+            <mes:Source>
+               <mes:Domain>SALES</mes:Domain>
+               <mes:Channel>INBC</mes:Channel>
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>
+               <mes:Name>Pega</mes:Name>
+            </mes:Source>
+         </mes:RequestHeader>
+         <gen:CurrentFlexDetails>
+            <prod:FlexFactorOnCurrentPolicy>1</prod:FlexFactorOnCurrentPolicy>
+         </gen:CurrentFlexDetails>
+         <gen:RenewalFlexDetails>
+            <prod:FlexFactor>0.7</prod:FlexFactor>
+            <prod:FlexFactorCalculatedFlag>true</prod:FlexFactorCalculatedFlag>
+         </gen:RenewalFlexDetails>
+         <gen:PaymentType>RAP</gen:PaymentType>
+         <gen:ProductList>
+            <prod:EffectivePriceDateTime>2019-10-24T00:00:00</prod:EffectivePriceDateTime>
+            <prod:PolicyStartDateTime>2019-10-24T00:00:00</prod:PolicyStartDateTime>
+            <prod:PolicyEndDateTime>2020-10-24T00:00:00</prod:PolicyEndDateTime>
+            <prod:OfferCodeDetailList>
+               <prod:OfferCodeDetail>
+                  <prod:OfferCode></prod:OfferCode>
+                  <prod:OfferCodeApplicationLevel>1</prod:OfferCodeApplicationLevel>
+               </prod:OfferCodeDetail>
+            </prod:OfferCodeDetailList>
+            <prod:SourceGroup>15</prod:SourceGroup>
+            <prod:SourceCode>W1037</prod:SourceCode>
+            <prod:Currency>GBP</prod:Currency>
+            <gen:MembershipTenure>1</gen:MembershipTenure>
+            <gen:Product><prod:ProductCode>PRD_UK_0001</prod:ProductCode></gen:Product>
+		
+            <gen:CoveredPersons>0</gen:CoveredPersons>
+         </gen:ProductList>
+         <gen:CustomerDetails>
+            <gen:Postcode>BA2 3RD</gen:Postcode>
+            <mem:MembershipNumber>6356011512658282</mem:MembershipNumber>
+         </gen:CustomerDetails>
+         <gen:RenewalRiskData>
+            <gen:CurrentPolicyDetails>
+               <gen:Product><prod:ProductCode>PRD_UK_0001</prod:ProductCode></gen:Product>
+               <gen:PartialFreeMembershipFlag>false</gen:PartialFreeMembershipFlag>
+               <gen:RecordedPaymentType>RAP</gen:RecordedPaymentType>
+               <gen:RecordedPaymentMeans>DD</gen:RecordedPaymentMeans>
+            </gen:CurrentPolicyDetails>
+            <gen:InScopeFlexFlag>true</gen:InScopeFlexFlag>
+            <gen:OptInOfferFlag>true</gen:OptInOfferFlag>
+         </gen:RenewalRiskData>
+      </gen:GenerateQuoteRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="dae65ebe-1c18-48ad-b5d1-b323dbee05c5" name="Request 3">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0123v:18047/SOAPServiceBinding/BSROS_GenerateQuote_RNL/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:veh="http://www.theaa.com/CommonServices/Data/General/Vehicle" xmlns:mem="http://www.theaa.com/CommonServices/Data/Membership.2" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL_2" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <gen:GenerateQuoteRequest>\r
+         <mes:RequestHeader>\r
+            <com:CorrelationId/>\r
+            <mes:TransactionId/>\r
+            <mes:Version>1.0</mes:Version>\r
+            <mes:RequestDateTime>2018-09-07T16:42:20</mes:RequestDateTime>\r
+            <mes:Source>\r
+               <mes:Domain>SALES</mes:Domain>\r
+               <mes:Channel>SanityTesting</mes:Channel>\r
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>\r
+               <mes:Name>Pricing Services</mes:Name>\r
+               <mes:User>PS Testing</mes:User>\r
+            </mes:Source>\r
+         </mes:RequestHeader>\r
+         <gen:IndicativePriceFlag>false</gen:IndicativePriceFlag>\r
+         <gen:CurrentFlexDetails>\r
+            <prod:FlexFactorOnCurrentPolicy>1.0</prod:FlexFactorOnCurrentPolicy>\r
+         </gen:CurrentFlexDetails>\r
+         <gen:RenewalFlexDetails>\r
+            <prod:FlexFactor>1.0</prod:FlexFactor>\r
+            <prod:FlexFactorCalculatedFlag>true</prod:FlexFactorCalculatedFlag>\r
+         </gen:RenewalFlexDetails>\r
+         <gen:RepriceDetails>\r
+            <gen:RepriceAction>ThresholdReprice</gen:RepriceAction>\r
+            <gen:OriginalPrice>12.67</gen:OriginalPrice>\r
+            <prod:RelatedAdjustmentCode>BBBC</prod:RelatedAdjustmentCode>\r
+            <gen:RepriceThreshold>0.5</gen:RepriceThreshold>\r
+         </gen:RepriceDetails>\r
+         <gen:PaymentType>CMM</gen:PaymentType>\r
+         <gen:ProductList>\r
+            <prod:EffectivePriceDateTime>2018-09-07T16:42:20</prod:EffectivePriceDateTime>\r
+            <prod:PolicyStartDateTime>2018-09-07T16:42:20</prod:PolicyStartDateTime>\r
+            <prod:PolicyEndDateTime>2019-09-07T16:42:20</prod:PolicyEndDateTime>\r
+            <prod:OfferCodeDetailList>\r
+               <prod:OfferCodeDetail>\r
+                  <prod:OfferCode>AAFRJA</prod:OfferCode>\r
+                  <prod:OfferCodeApplicationLevel>1</prod:OfferCodeApplicationLevel>\r
+               </prod:OfferCodeDetail>\r
+            </prod:OfferCodeDetailList>\r
+            <prod:SourceGroup>sample</prod:SourceGroup>\r
+            <prod:SourceCode>INS04</prod:SourceCode>\r
+            <prod:Currency>GBP</prod:Currency>\r
+            <gen:MembershipTenure>5</gen:MembershipTenure>\r
+            <gen:ManConYear1>true</gen:ManConYear1>\r
+            <prod:AssociatesList>\r
+               <prod:Associate>\r
+                  <prod:AssociateType>U17</prod:AssociateType>\r
+                  <prod:NumberOfFreeAssociates>1</prod:NumberOfFreeAssociates>\r
+                  <prod:RelatedOfferCode>AAFRJA</prod:RelatedOfferCode>\r
+               </prod:Associate>\r
+            </prod:AssociatesList>\r
+            <gen:Product>\r
+               <prod:ProductCode>PRD_UK_0001</prod:ProductCode>\r
+            </gen:Product>\r
+            <gen:CoveredPersons>3</gen:CoveredPersons>\r
+         </gen:ProductList>\r
+         <gen:CustomerDetails>\r
+            <gen:Postcode>BA25NB</gen:Postcode>\r
+            <mem:MembershipNumber>6356010000005367</mem:MembershipNumber>\r
+         </gen:CustomerDetails>\r
+      </gen:GenerateQuoteRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="a673c3bf-95f5-4a2a-81a1-6c3cb17f72bf" name="Request 4">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0123v:18047/SOAPServiceBinding/BSROS_GenerateQuote_RNL/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL_2" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2" xmlns:mem="http://www.theaa.com/CommonServices/Data/Membership.2" xmlns:veh="http://www.theaa.com/CommonServices/Data/General/Vehicle">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gen:GenerateQuoteRequest>
+         <mes:RequestHeader>
+            <mes:TransactionId>RNLQ-1802-197</mes:TransactionId>
+            <mes:Version>1.0</mes:Version>
+            <mes:RequestDateTime>2018-02-28T09:24:05</mes:RequestDateTime>
+            <mes:Source>
+               <mes:Domain>SALES</mes:Domain>
+               <mes:Channel>INBC</mes:Channel>
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>
+               <mes:Name>Pega</mes:Name>
+            </mes:Source>
+         </mes:RequestHeader>
+         <gen:CurrentFlexDetails>
+            <prod:FlexFactorOnCurrentPolicy>1</prod:FlexFactorOnCurrentPolicy>
+         </gen:CurrentFlexDetails>
+         <gen:RenewalFlexDetails>
+            <prod:FlexFactor>1</prod:FlexFactor>
+            <prod:FlexFactorCalculatedFlag>true</prod:FlexFactorCalculatedFlag>
+         </gen:RenewalFlexDetails>
+         <gen:PaymentType>CMM</gen:PaymentType>
+         <gen:ProductList>
+            <prod:EffectivePriceDateTime>2019-02-22T00:00:00</prod:EffectivePriceDateTime>
+            <prod:PolicyStartDateTime>2019-02-22T00:00:00</prod:PolicyStartDateTime>
+            <prod:PolicyEndDateTime>2020-02-21T00:00:00</prod:PolicyEndDateTime>
+            <prod:SourceGroup>15</prod:SourceGroup>
+            <prod:SourceCode>W1037</prod:SourceCode>
+            <prod:Currency>GBP</prod:Currency>
+            <gen:MembershipTenure>1</gen:MembershipTenure>
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0010</prod:ProductCode>
+            </gen:Product>
+            <gen:CoveredPersons>0</gen:CoveredPersons>
+<!--            <prod:AgentDiscountRequestedList>
+-->
+<!--               <prod:AgentDiscountRequested>
+-->
+<!--                  <prod:AgentDiscountCode>AB2C</prod:AgentDiscountCode>
+-->
+<!--                  <prod:AgentDiscountType>P</prod:AgentDiscountType>
+-->
+<!--                  <prod:AgentDiscountValue>0.1</prod:AgentDiscountValue>
+-->
+<!--               </prod:AgentDiscountRequested>
+-->
+<!--            </prod:AgentDiscountRequestedList>
+-->
+         </gen:ProductList>
+         <gen:CustomerDetails>
+            <gen:Postcode>BN10 8PR</gen:Postcode>
+            <mem:MembershipNumber>6356011512658282</mem:MembershipNumber>
+         </gen:CustomerDetails>
+      </gen:GenerateQuoteRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="85119d14-ef13-4672-af0d-4e42f0879582" name="Request 5">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0123v:18147/SOAPServiceBinding/BSROS_GenerateQuote_RNL/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL_2" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2" xmlns:mem="http://www.theaa.com/CommonServices/Data/Membership.2" xmlns:veh="http://www.theaa.com/CommonServices/Data/General/Vehicle">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gen:GenerateQuoteRequest>
+         <mes:RequestHeader>
+            <mes:TransactionId>RNLQ-1802-197</mes:TransactionId>
+            <mes:Version>1.0</mes:Version>
+            <mes:RequestDateTime>2018-02-28T09:24:05</mes:RequestDateTime>
+            <mes:Source>
+               <mes:Domain>SALES</mes:Domain>
+               <mes:Channel>INBC</mes:Channel>
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>
+               <mes:Name>Pega</mes:Name>
+            </mes:Source>
+         </mes:RequestHeader>
+         <gen:CurrentFlexDetails>
+            <prod:FlexFactorOnCurrentPolicy>1</prod:FlexFactorOnCurrentPolicy>
+         </gen:CurrentFlexDetails>
+         <gen:RenewalFlexDetails>
+            <prod:FlexFactor>1.5</prod:FlexFactor>
+            <prod:FlexFactorCalculatedFlag>true</prod:FlexFactorCalculatedFlag>
+         </gen:RenewalFlexDetails>
+         <gen:PaymentType>RAP</gen:PaymentType>
+         <gen:ProductList>
+            <prod:EffectivePriceDateTime>2019-02-22T00:00:00</prod:EffectivePriceDateTime>
+            <prod:PolicyStartDateTime>2019-02-22T00:00:00</prod:PolicyStartDateTime>
+            <prod:PolicyEndDateTime>2020-02-21T00:00:00</prod:PolicyEndDateTime>
+            <prod:SourceGroup>15</prod:SourceGroup>
+            <prod:SourceCode>W1037</prod:SourceCode>
+            <prod:Currency>GBP</prod:Currency>
+            <gen:MembershipTenure>1</gen:MembershipTenure>
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0010</prod:ProductCode>
+            </gen:Product>
+            <gen:CoveredPersons>0</gen:CoveredPersons>
+         </gen:ProductList>
+         <gen:CustomerDetails>
+            <gen:Postcode>BN10 8PR</gen:Postcode>
+            <mem:MembershipNumber>6356011512658282</mem:MembershipNumber>
+         </gen:CustomerDetails>
+         
+      </gen:GenerateQuoteRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="549fe514-a5dd-4e79-937a-8f71c585791a" name="Request 6">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0124v:18047/SOAPServiceBinding/BSROS_GenerateQuote_RNL/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL_2" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2" xmlns:mem="http://www.theaa.com/CommonServices/Data/Membership.2" xmlns:veh="http://www.theaa.com/CommonServices/Data/General/Vehicle">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gen:GenerateQuoteRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+         <mes:RequestHeader>
+            <mes:TransactionId>RNLQ-1810-2169</mes:TransactionId>
+            <mes:Version>2.0</mes:Version>
+            <mes:RequestDateTime>2018-10-12T16:20:49</mes:RequestDateTime>
+            <mes:Source>
+               <mes:Domain>SALES</mes:Domain>
+               <mes:Channel>INBC</mes:Channel>
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>
+               <mes:Name>Pega</mes:Name>
+            </mes:Source>
+         </mes:RequestHeader>
+         <gen:CurrentFlexDetails>
+            <prod:FlexFactorOnCurrentPolicy>1.17569402250644</prod:FlexFactorOnCurrentPolicy>
+         </gen:CurrentFlexDetails>
+         <gen:PaymentType>RAP</gen:PaymentType>
+         <gen:ProductList>
+            <prod:EffectivePriceDateTime>2018-10-14T01:00:00</prod:EffectivePriceDateTime>
+            <prod:PolicyStartDateTime>2018-10-14T01:00:00</prod:PolicyStartDateTime>
+            <prod:PolicyEndDateTime>2019-10-13T01:00:00</prod:PolicyEndDateTime>
+            <prod:OfferCodeDetailList>
+               <prod:OfferCodeDetail>
+                  <prod:OfferCode/>
+                  <prod:OfferCodeApplicationLevel>1</prod:OfferCodeApplicationLevel>
+               </prod:OfferCodeDetail>
+            </prod:OfferCodeDetailList>
+            <prod:SourceGroup>34</prod:SourceGroup>
+            <prod:SourceCode>SRPT1</prod:SourceCode>
+            <prod:Currency>GBP</prod:Currency>
+            <gen:MembershipTenure>23</gen:MembershipTenure>
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0010</prod:ProductCode>
+            </gen:Product>
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0003</prod:ProductCode>
+            </gen:Product>
+       
+            <gen:VehicleAgeList>
+               <gen:VehicleAge>1</gen:VehicleAge>
+            </gen:VehicleAgeList>
+            <gen:CoveredPersons>4</gen:CoveredPersons>
+         </gen:ProductList>
+         <gen:CustomerDetails>
+            <gen:Postcode>EX23 9EY</gen:Postcode>
+            <mem:MembershipNumber>6356015507954531</mem:MembershipNumber>
+         </gen:CustomerDetails>
+         <gen:RenewalRiskData>
+            <gen:CurrentPolicyDetails>
+               <gen:Product>
+                  <prod:ProductCode>PRD_UK_0010</prod:ProductCode>
+               </gen:Product>
+               <gen:Product>
+                  <prod:ProductCode>PRD_UK_0003</prod:ProductCode>
+               </gen:Product>
+          
+               <gen:PartialFreeMembershipFlag>true</gen:PartialFreeMembershipFlag>
+               <gen:RecordedPaymentType>RAP</gen:RecordedPaymentType>
+               <gen:RecordedPaymentMeans>CC</gen:RecordedPaymentMeans>
+               <gen:PartyList>
+                  <gen:Party>
+                     <gen:PartyId>499211</gen:PartyId>
+                     <gen:MainPolicyHolderFlag>true</gen:MainPolicyHolderFlag>
+                     <gen:DateOfBirth>1998-09-01</gen:DateOfBirth>
+                  </gen:Party>
+        
+               </gen:PartyList>
+               <gen:VehicleDetailsList>
+                  <gen:VehicleDetails>
+                     <gen:VehicleAge>1</gen:VehicleAge>
+                  </gen:VehicleDetails>
+               </gen:VehicleDetailsList>
+            </gen:CurrentPolicyDetails>
+            <gen:InScopeFlexFlag>true</gen:InScopeFlexFlag>
+         </gen:RenewalRiskData>
+      </gen:GenerateQuoteRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="45850e05-469b-44c4-b90e-19c3d9039043" name="Request 7">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0123v:18147/SOAPServiceBinding/BSROS_GenerateQuote_RNL/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL_2" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2" xmlns:mem="http://www.theaa.com/CommonServices/Data/Membership.2" xmlns:veh="http://www.theaa.com/CommonServices/Data/General/Vehicle">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gen:GenerateQuoteRequest>
+         <mes:RequestHeader>
+            <mes:TransactionId>RNLQ-1802-197</mes:TransactionId>
+            <mes:Version>1.0</mes:Version>
+            <mes:RequestDateTime>2018-11-29T14:13:41</mes:RequestDateTime>
+            <mes:Source>
+               <mes:Domain>SALES</mes:Domain>
+               <mes:Channel>INBC</mes:Channel>
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>
+               <mes:Name>Pega</mes:Name>
+              
+            </mes:Source>
+         </mes:RequestHeader>
+         <gen:CurrentFlexDetails>
+            <prod:FlexFactorOnCurrentPolicy>1.0</prod:FlexFactorOnCurrentPolicy>
+         </gen:CurrentFlexDetails>
+         <gen:PaymentType>RAP</gen:PaymentType>
+         <gen:ProductList>
+            <prod:EffectivePriceDateTime>2018-12-08T00:00:00</prod:EffectivePriceDateTime>
+            <prod:PolicyStartDateTime>2018-12-08T00:00:00</prod:PolicyStartDateTime>
+            <prod:PolicyEndDateTime>2019-12-07T01:00:00</prod:PolicyEndDateTime>
+            <prod:OfferCodeDetailList>
+               <prod:OfferCodeDetail>
+                  <prod:OfferCode>AAFRJA</prod:OfferCode>
+                  <prod:OfferCodeApplicationLevel>1</prod:OfferCodeApplicationLevel>
+               </prod:OfferCodeDetail>
+            </prod:OfferCodeDetailList>
+            <prod:SourceGroup>15</prod:SourceGroup>
+            <prod:SourceCode>O1037</prod:SourceCode>
+            <prod:Currency>GBP</prod:Currency>
+            <gen:MembershipTenure>2</gen:MembershipTenure>
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0011</prod:ProductCode>
+            </gen:Product>
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0005</prod:ProductCode>
+            </gen:Product>
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0004</prod:ProductCode>
+            </gen:Product>
+            <gen:CoveredPersons>1</gen:CoveredPersons>
+         </gen:ProductList>
+         <gen:CustomerDetails>
+            <gen:Postcode>M20 6UE</gen:Postcode>
+            <mem:MembershipNumber>6356011146227843</mem:MembershipNumber>
+         </gen:CustomerDetails>
+         <gen:RenewalRiskData>
+            <gen:CurrentPolicyDetails>
+               <gen:Product>
+                  <prod:ProductCode>PRD_UK_0011</prod:ProductCode>
+               </gen:Product>
+               <gen:Product>
+                  <prod:ProductCode>PRD_UK_0004</prod:ProductCode>
+               </gen:Product>
+               <gen:Product>
+                  <prod:ProductCode>PRD_UK_0005</prod:ProductCode>
+               </gen:Product>
+               <gen:PartialFreeMembershipFlag>false</gen:PartialFreeMembershipFlag>
+               <gen:RecordedPaymentType>RAP</gen:RecordedPaymentType>
+               <gen:RecordedPaymentMeans>CC</gen:RecordedPaymentMeans>
+               <gen:PartyList>
+                  <gen:Party>
+                     <gen:PartyId>532451</gen:PartyId>
+                     <gen:MainPolicyHolderFlag>true</gen:MainPolicyHolderFlag>
+                     <gen:DateOfBirth>1949-12-10</gen:DateOfBirth>
+                  </gen:Party>
+               </gen:PartyList>
+            </gen:CurrentPolicyDetails>
+            <gen:InScopeFlexFlag>true</gen:InScopeFlexFlag>
+            <gen:OptInOfferFlag>true</gen:OptInOfferFlag>
+         </gen:RenewalRiskData>
+      
+      </gen:GenerateQuoteRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="f5534f37-49ee-45b5-a9ea-bd369c6d1500" name="Request 8">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://0.0.0.0:18047/SOAPServiceBinding/BSROS_GenerateQuote_RNL/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL_2" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2" xmlns:mem="http://www.theaa.com/CommonServices/Data/Membership.2" xmlns:veh="http://www.theaa.com/CommonServices/Data/General/Vehicle">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gen:GenerateQuoteRequest>
+         <mes:RequestHeader>
+            <!--Optional:-->
+            <com:CorrelationId>?</com:CorrelationId>
+            <mes:TransactionId>?</mes:TransactionId>
+            <mes:Version>?</mes:Version>
+            <mes:RequestDateTime>?</mes:RequestDateTime>
+            <mes:Source>
+               <mes:Domain>?</mes:Domain>
+               <mes:Channel>?</mes:Channel>
+               <mes:LineOfBusiness>?</mes:LineOfBusiness>
+               <mes:Name>?</mes:Name>
+               <!--Optional:-->
+               <mes:Address>?</mes:Address>
+               <!--Optional:-->
+               <mes:InstanceId>?</mes:InstanceId>
+               <!--Optional:-->
+               <mes:ApplicationVersion>?</mes:ApplicationVersion>
+               <!--Optional:-->
+               <mes:User>?</mes:User>
+            </mes:Source>
+            <!--Optional:-->
+            <mes:MIContext>?</mes:MIContext>
+         </mes:RequestHeader>
+         <!--Optional:-->
+         <gen:IndicativePriceFlag>?</gen:IndicativePriceFlag>
+         <gen:CurrentFlexDetails>
+            <prod:FlexFactorOnCurrentPolicy>?</prod:FlexFactorOnCurrentPolicy>
+         </gen:CurrentFlexDetails>
+         <!--Optional:-->
+         <gen:RenewalFlexDetails>
+            <prod:FlexFactor>?</prod:FlexFactor>
+            <prod:FlexFactorCalculatedFlag>?</prod:FlexFactorCalculatedFlag>
+         </gen:RenewalFlexDetails>
+         <!--Optional:-->
+         <gen:RepriceDetails>
+            <gen:RepriceAction>?</gen:RepriceAction>
+            <gen:OriginalPrice>?</gen:OriginalPrice>
+            <prod:RelatedAdjustmentCode>?</prod:RelatedAdjustmentCode>
+            <!--Optional:-->
+            <gen:RepriceThreshold>?</gen:RepriceThreshold>
+         </gen:RepriceDetails>
+         <gen:PaymentType>?</gen:PaymentType>
+         <gen:ProductList>
+            <prod:EffectivePriceDateTime>?</prod:EffectivePriceDateTime>
+            <prod:PolicyStartDateTime>?</prod:PolicyStartDateTime>
+            <prod:PolicyEndDateTime>?</prod:PolicyEndDateTime>
+            <!--Optional:-->
+            <prod:OfferCodeDetailList>
+               <!--1 or more repetitions:-->
+               <prod:OfferCodeDetail>
+                  <prod:OfferCode>?</prod:OfferCode>
+                  <prod:OfferCodeApplicationLevel>?</prod:OfferCodeApplicationLevel>
+               </prod:OfferCodeDetail>
+            </prod:OfferCodeDetailList>
+            <!--Optional:-->
+            <prod:SourceGroup>?</prod:SourceGroup>
+            <prod:SourceCode>?</prod:SourceCode>
+            <prod:Currency>?</prod:Currency>
+            <!--Optional:-->
+            <gen:MembershipTenure>?</gen:MembershipTenure>
+            <!--Optional:-->
+            <gen:ManConYear1>?</gen:ManConYear1>
+            <!--Optional:-->
+            <prod:AssociatesList>
+               <!--1 or more repetitions:-->
+               <prod:Associate>
+                  <prod:AssociateType>?</prod:AssociateType>
+                  <prod:NumberOfFreeAssociates>?</prod:NumberOfFreeAssociates>
+                  <prod:RelatedOfferCode>?</prod:RelatedOfferCode>
+               </prod:Associate>
+            </prod:AssociatesList>
+            <!--1 or more repetitions:-->
+            <gen:Product>
+               <prod:ProductCode>?</prod:ProductCode>
+               <!--Optional:-->
+               <prod:CoverageList>
+                  <!--1 or more repetitions:-->
+                  <prod:Coverage>
+                     <prod:CoverageCode>?</prod:CoverageCode>
+                     <!--Optional:-->
+                     <prod:LimitList>
+                        <!--1 or more repetitions:-->
+                        <prod:Limit>
+                           <prod:Type>?</prod:Type>
+                           <prod:Value>?</prod:Value>
+                        </prod:Limit>
+                     </prod:LimitList>
+                     <!--Optional:-->
+                     <prod:AdditionalData>
+                        <prod:Type>?</prod:Type>
+                        <prod:Value>?</prod:Value>
+                     </prod:AdditionalData>
+                  </prod:Coverage>
+               </prod:CoverageList>
+            </gen:Product>
+            <!--Optional:-->
+            <gen:VehicleAgeList>
+               <!--1 or more repetitions:-->
+               <gen:VehicleAge>?</gen:VehicleAge>
+            </gen:VehicleAgeList>
+            <gen:CoveredPersons>?</gen:CoveredPersons>
+            <!--Optional:-->
+            <prod:RequestSurchargeAndFeeList>
+               <!--1 or more repetitions:-->
+               <prod:SurchargeOrFee>
+                  <prod:SurchargeRequestType>?</prod:SurchargeRequestType>
+                  <prod:IsWaived>?</prod:IsWaived>
+                  <prod:WaivedReason>?</prod:WaivedReason>
+                  <prod:SurchargeOrFeeCode>?</prod:SurchargeOrFeeCode>
+               </prod:SurchargeOrFee>
+            </prod:RequestSurchargeAndFeeList>
+            <!--Optional:-->
+            <prod:AgentDiscountRequestedList>
+               <!--1 or more repetitions:-->
+               <prod:AgentDiscountRequested>
+                  <prod:AgentDiscountCode>?</prod:AgentDiscountCode>
+                  <prod:AgentDiscountType>?</prod:AgentDiscountType>
+                  <prod:AgentDiscountValue>?</prod:AgentDiscountValue>
+               </prod:AgentDiscountRequested>
+            </prod:AgentDiscountRequestedList>
+         </gen:ProductList>
+         <gen:CustomerDetails>
+            <gen:Postcode>?</gen:Postcode>
+            <mem:MembershipNumber>?</mem:MembershipNumber>
+         </gen:CustomerDetails>
+         <!--Optional:-->
+         <gen:SurchargeFee>?</gen:SurchargeFee>
+         <!--Optional:-->
+         <gen:RenewalRiskData>
+            <gen:CurrentPolicyDetails>
+               <!--1 or more repetitions:-->
+               <gen:Product>
+                  <prod:ProductCode>?</prod:ProductCode>
+                  <!--Optional:-->
+                  <prod:CoverageList>
+                     <!--1 or more repetitions:-->
+                     <prod:Coverage>
+                        <prod:CoverageCode>?</prod:CoverageCode>
+                        <!--Optional:-->
+                        <prod:LimitList>
+                           <!--1 or more repetitions:-->
+                           <prod:Limit>
+                              <prod:Type>?</prod:Type>
+                              <prod:Value>?</prod:Value>
+                           </prod:Limit>
+                        </prod:LimitList>
+                        <!--Optional:-->
+                        <prod:AdditionalData>
+                           <prod:Type>?</prod:Type>
+                           <prod:Value>?</prod:Value>
+                        </prod:AdditionalData>
+                     </prod:Coverage>
+                  </prod:CoverageList>
+               </gen:Product>
+               <gen:PartialFreeMembershipFlag>?</gen:PartialFreeMembershipFlag>
+               <gen:RecordedPaymentType>?</gen:RecordedPaymentType>
+               <gen:RecordedPaymentMeans>?</gen:RecordedPaymentMeans>
+               <!--Optional:-->
+               <gen:PartyList>
+                  <!--1 or more repetitions:-->
+                  <gen:Party>
+                     <gen:PartyId>?</gen:PartyId>
+                     <gen:MainPolicyHolderFlag>?</gen:MainPolicyHolderFlag>
+                     <gen:DateOfBirth>?</gen:DateOfBirth>
+                  </gen:Party>
+               </gen:PartyList>
+               <!--Optional:-->
+               <gen:VehicleDetailsList>
+                  <!--1 or more repetitions:-->
+                  <gen:VehicleDetails>
+                     <!--Optional:-->
+                     <veh:ABIBrokerNetCode IsAACode="?">?</veh:ABIBrokerNetCode>
+                     <!--Optional:-->
+                     <veh:Fuel>
+                        <!--Optional:-->
+                        <veh:Code>?</veh:Code>
+                        <!--Optional:-->
+                        <veh:Description>?</veh:Description>
+                     </veh:Fuel>
+                     <!--Optional:-->
+                     <veh:DoorPlan>
+                        <!--Optional:-->
+                        <veh:Code>?</veh:Code>
+                        <!--Optional:-->
+                        <veh:Description>?</veh:Description>
+                     </veh:DoorPlan>
+                     <!--Optional:-->
+                     <veh:EngineCapacity>?</veh:EngineCapacity>
+                     <!--Optional:-->
+                     <veh:YearOfManufacture>?</veh:YearOfManufacture>
+                     <gen:VehicleAge>?</gen:VehicleAge>
+                  </gen:VehicleDetails>
+               </gen:VehicleDetailsList>
+            </gen:CurrentPolicyDetails>
+            <gen:InScopeFlexFlag>?</gen:InScopeFlexFlag>
+            <!--Optional:-->
+            <gen:OptInOfferFlag>?</gen:OptInOfferFlag>
+         </gen:RenewalRiskData>
+         <!--Optional:-->
+         <gen:LastTransactionRecord>
+            <gen:TransactionRecord>
+               <gen:TransactionType>?</gen:TransactionType>
+               <gen:TransactionStartDateTime>?</gen:TransactionStartDateTime>
+               <gen:ProductList>
+                  <prod:PaymentType>?</prod:PaymentType>
+                  <prod:Currency>?</prod:Currency>
+                  <!--1 or more repetitions:-->
+                  <gen:Product>
+                     <prod:ProductCode>?</prod:ProductCode>
+                     <prod:ProductPriceName>?</prod:ProductPriceName>
+                     <prod:PriceList>
+                        <!--1 or more repetitions:-->
+                        <prod:Price>
+                           <prod:PriceElementType>?</prod:PriceElementType>
+                           <prod:PriceBreakdown>
+                              <prod:CorePrice>
+                                 <prod:NetRate>?</prod:NetRate>
+                                 <prod:NetRateTax>?</prod:NetRateTax>
+                                 <prod:Commission>?</prod:Commission>
+                                 <prod:CommissionTax>?</prod:CommissionTax>
+                                 <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>
+                                 <prod:TaxPercentage>?</prod:TaxPercentage>
+                                 <prod:TaxTotal>?</prod:TaxTotal>
+                                 <prod:Total>?</prod:Total>
+                              </prod:CorePrice>
+                              <prod:ArrangementFee>
+                                 <prod:Fee>?</prod:Fee>
+                                 <prod:FeeTax>?</prod:FeeTax>
+                                 <!--Optional:-->
+                                 <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>
+                                 <!--Optional:-->
+                                 <prod:TaxPercentage>?</prod:TaxPercentage>
+                                 <prod:Total>?</prod:Total>
+                              </prod:ArrangementFee>
+                              <!--Optional:-->
+                              <prod:OfferCodeDiscountList>
+                                 <!--1 or more repetitions:-->
+                                 <prod:OfferCodeDiscount>
+                                    <prod:Code>?</prod:Code>
+                                    <prod:DiscountApplicationApproach>?</prod:DiscountApplicationApproach>
+                                    <prod:NetRate>?</prod:NetRate>
+                                    <prod:NetRateTax>?</prod:NetRateTax>
+                                    <prod:Commission>?</prod:Commission>
+                                    <prod:CommissionTax>?</prod:CommissionTax>
+                                    <prod:ArrangementFee>?</prod:ArrangementFee>
+                                    <prod:ArrangementFeeTax>?</prod:ArrangementFeeTax>
+                                    <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>
+                                    <prod:TaxPercentage>?</prod:TaxPercentage>
+                                    <prod:Total>?</prod:Total>
+                                 </prod:OfferCodeDiscount>
+                              </prod:OfferCodeDiscountList>
+                              <!--Optional:-->
+                              <prod:AgentDiscountList>
+                                 <!--1 or more repetitions:-->
+                                 <prod:AgentDiscount>
+                                    <prod:Code>?</prod:Code>
+                                    <prod:DiscountApplicationApproach>?</prod:DiscountApplicationApproach>
+                                    <prod:NetRate>?</prod:NetRate>
+                                    <prod:NetRateTax>?</prod:NetRateTax>
+                                    <prod:Commission>?</prod:Commission>
+                                    <prod:CommissionTax>?</prod:CommissionTax>
+                                    <prod:ArrangementFee>?</prod:ArrangementFee>
+                                    <prod:ArrangementFeeTax>?</prod:ArrangementFeeTax>
+                                    <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>
+                                    <prod:TaxPercentage>?</prod:TaxPercentage>
+                                    <prod:Total>?</prod:Total>
+                                 </prod:AgentDiscount>
+                              </prod:AgentDiscountList>
+                              <!--Optional:-->
+                              <prod:SystemDiscountList>
+                                 <!--1 or more repetitions:-->
+                                 <prod:SystemDiscount>
+                                    <prod:Code>?</prod:Code>
+                                    <prod:SystemDiscountCategory>?</prod:SystemDiscountCategory>
+                                    <prod:DiscountApplicationApproach>?</prod:DiscountApplicationApproach>
+                                    <prod:NetRate>?</prod:NetRate>
+                                    <prod:NetRateTax>?</prod:NetRateTax>
+                                    <prod:Commission>?</prod:Commission>
+                                    <prod:CommissionTax>?</prod:CommissionTax>
+                                    <prod:ArrangementFee>?</prod:ArrangementFee>
+                                    <prod:ArrangementFeeTax>?</prod:ArrangementFeeTax>
+                                    <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>
+                                    <prod:TaxPercentage>?</prod:TaxPercentage>
+                                    <prod:Total>?</prod:Total>
+                                 </prod:SystemDiscount>
+                              </prod:SystemDiscountList>
+                              <!--Optional:-->
+                              <prod:AccountingTotals>
+                                 <prod:CoreDiscountsTotal>?</prod:CoreDiscountsTotal>
+                                 <prod:CoreDiscountsTaxTotal>?</prod:CoreDiscountsTaxTotal>
+                                 <prod:CoreCommissionDiscountsTotal>?</prod:CoreCommissionDiscountsTotal>
+                                 <prod:CoreNetRateDiscountsTotal>?</prod:CoreNetRateDiscountsTotal>
+                                 <prod:ArrangementFeeGrandDiscountsTotal>?</prod:ArrangementFeeGrandDiscountsTotal>
+                                 <prod:ArrangementFeeTaxDiscountsTotal>?</prod:ArrangementFeeTaxDiscountsTotal>
+                                 <prod:ArrangementFeeDiscountsTotal>?</prod:ArrangementFeeDiscountsTotal>
+                              </prod:AccountingTotals>
+                           </prod:PriceBreakdown>
+                           <prod:TaxType>?</prod:TaxType>
+                           <prod:TaxDate>?</prod:TaxDate>
+                           <prod:DateInceptedOnPolicy>?</prod:DateInceptedOnPolicy>
+                           <prod:RelativityPriceFactor>?</prod:RelativityPriceFactor>
+                           <prod:ExtrapolationFactor>?</prod:ExtrapolationFactor>
+                           <prod:ArrangementFeeTotal>?</prod:ArrangementFeeTotal>
+                           <prod:TotalLessArrangementFeeTotal>?</prod:TotalLessArrangementFeeTotal>
+                           <prod:TotalLessDiscounts>?</prod:TotalLessDiscounts>
+                           <prod:Total>?</prod:Total>
+                        </prod:Price>
+                        <!--Zero or more repetitions:-->
+                        <prod:PolicyPrice>
+                           <prod:PriceElementType>?</prod:PriceElementType>
+                           <prod:PriceBreakdown>
+                              <prod:CorePrice>
+                                 <prod:NetRate>?</prod:NetRate>
+                                 <prod:NetRateTax>?</prod:NetRateTax>
+                                 <prod:Commission>?</prod:Commission>
+                                 <prod:CommissionTax>?</prod:CommissionTax>
+                                 <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>
+                                 <prod:TaxPercentage>?</prod:TaxPercentage>
+                                 <prod:TaxTotal>?</prod:TaxTotal>
+                                 <prod:Total>?</prod:Total>
+                              </prod:CorePrice>
+                              <prod:ArrangementFee>
+                                 <prod:Fee>?</prod:Fee>
+                                 <prod:FeeTax>?</prod:FeeTax>
+                                 <!--Optional:-->
+                                 <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>
+                                 <!--Optional:-->
+                                 <prod:TaxPercentage>?</prod:TaxPercentage>
+                                 <prod:Total>?</prod:Total>
+                              </prod:ArrangementFee>
+                              <!--Optional:-->
+                              <prod:OfferCodeDiscountList>
+                                 <!--1 or more repetitions:-->
+                                 <prod:OfferCodeDiscount>
+                                    <prod:Code>?</prod:Code>
+                                    <prod:DiscountApplicationApproach>?</prod:DiscountApplicationApproach>
+                                    <prod:NetRate>?</prod:NetRate>
+                                    <prod:NetRateTax>?</prod:NetRateTax>
+                                    <prod:Commission>?</prod:Commission>
+                                    <prod:CommissionTax>?</prod:CommissionTax>
+                                    <prod:ArrangementFee>?</prod:ArrangementFee>
+                                    <prod:ArrangementFeeTax>?</prod:ArrangementFeeTax>
+                                    <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>
+                                    <prod:TaxPercentage>?</prod:TaxPercentage>
+                                    <prod:Total>?</prod:Total>
+                                 </prod:OfferCodeDiscount>
+                              </prod:OfferCodeDiscountList>
+                              <!--Optional:-->
+                              <prod:AgentDiscountList>
+                                 <!--1 or more repetitions:-->
+                                 <prod:AgentDiscount>
+                                    <prod:Code>?</prod:Code>
+                                    <prod:DiscountApplicationApproach>?</prod:DiscountApplicationApproach>
+                                    <prod:NetRate>?</prod:NetRate>
+                                    <prod:NetRateTax>?</prod:NetRateTax>
+                                    <prod:Commission>?</prod:Commission>
+                                    <prod:CommissionTax>?</prod:CommissionTax>
+                                    <prod:ArrangementFee>?</prod:ArrangementFee>
+                                    <prod:ArrangementFeeTax>?</prod:ArrangementFeeTax>
+                                    <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>
+                                    <prod:TaxPercentage>?</prod:TaxPercentage>
+                                    <prod:Total>?</prod:Total>
+                                 </prod:AgentDiscount>
+                              </prod:AgentDiscountList>
+                              <!--Optional:-->
+                              <prod:SystemDiscountList>
+                                 <!--1 or more repetitions:-->
+                                 <prod:SystemDiscount>
+                                    <prod:Code>?</prod:Code>
+                                    <prod:SystemDiscountCategory>?</prod:SystemDiscountCategory>
+                                    <prod:DiscountApplicationApproach>?</prod:DiscountApplicationApproach>
+                                    <prod:NetRate>?</prod:NetRate>
+                                    <prod:NetRateTax>?</prod:NetRateTax>
+                                    <prod:Commission>?</prod:Commission>
+                                    <prod:CommissionTax>?</prod:CommissionTax>
+                                    <prod:ArrangementFee>?</prod:ArrangementFee>
+                                    <prod:ArrangementFeeTax>?</prod:ArrangementFeeTax>
+                                    <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>
+                                    <prod:TaxPercentage>?</prod:TaxPercentage>
+                                    <prod:Total>?</prod:Total>
+                                 </prod:SystemDiscount>
+                              </prod:SystemDiscountList>
+                              <!--Optional:-->
+                              <prod:AccountingTotals>
+                                 <prod:CoreDiscountsTotal>?</prod:CoreDiscountsTotal>
+                                 <prod:CoreDiscountsTaxTotal>?</prod:CoreDiscountsTaxTotal>
+                                 <prod:CoreCommissionDiscountsTotal>?</prod:CoreCommissionDiscountsTotal>
+                                 <prod:CoreNetRateDiscountsTotal>?</prod:CoreNetRateDiscountsTotal>
+                                 <prod:ArrangementFeeGrandDiscountsTotal>?</prod:ArrangementFeeGrandDiscountsTotal>
+                                 <prod:ArrangementFeeTaxDiscountsTotal>?</prod:ArrangementFeeTaxDiscountsTotal>
+                                 <prod:ArrangementFeeDiscountsTotal>?</prod:ArrangementFeeDiscountsTotal>
+                              </prod:AccountingTotals>
+                           </prod:PriceBreakdown>
+                           <prod:TaxType>?</prod:TaxType>
+                           <prod:TaxDate>?</prod:TaxDate>
+                           <prod:DateInceptedOnPolicy>?</prod:DateInceptedOnPolicy>
+                           <prod:RelativityPriceFactor>?</prod:RelativityPriceFactor>
+                           <prod:ExtrapolationFactor>?</prod:ExtrapolationFactor>
+                           <prod:ArrangementFeeTotal>?</prod:ArrangementFeeTotal>
+                           <prod:TotalLessArrangementFeeTotal>?</prod:TotalLessArrangementFeeTotal>
+                           <prod:TotalLessDiscounts>?</prod:TotalLessDiscounts>
+                           <prod:Total>?</prod:Total>
+                        </prod:PolicyPrice>
+                     </prod:PriceList>
+                     <gen:ActionDateTime>?</gen:ActionDateTime>
+                  </gen:Product>
+                  <!--Zero or more repetitions:-->
+                  <prod:SurchargeFeeList>
+                     <!--1 or more repetitions:-->
+                     <prod:SurchargeFee>
+                        <!--Optional:-->
+                        <prod:Code>?</prod:Code>
+                        <!--Optional:-->
+                        <prod:SurchargeRequestType>?</prod:SurchargeRequestType>
+                        <!--Optional:-->
+                        <prod:IsWaived>?</prod:IsWaived>
+                        <!--Optional:-->
+                        <prod:TaxType>?</prod:TaxType>
+                        <prod:Fee>?</prod:Fee>
+                        <prod:FeeTax>?</prod:FeeTax>
+                        <prod:TaxPercentage>?</prod:TaxPercentage>
+                        <prod:Total>?</prod:Total>
+                     </prod:SurchargeFee>
+                  </prod:SurchargeFeeList>
+               </gen:ProductList>
+            </gen:TransactionRecord>
+         </gen:LastTransactionRecord>
+      </gen:GenerateQuoteRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="f293ff30-149d-47f0-95f2-30017cdf6b95" name="Copy of Request 2">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0124v:18047/SOAPServiceBinding/BSROS_GenerateQuote_RNL/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:veh="http://www.theaa.com/CommonServices/Data/General/Vehicle" xmlns:mem="http://www.theaa.com/CommonServices/Data/Membership.2" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL_2" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <gen:GenerateQuoteRequest>\r
+         <mes:RequestHeader>\r
+            <com:CorrelationId/>\r
+            <mes:TransactionId/>\r
+            <mes:Version>1.0</mes:Version>\r
+            <mes:RequestDateTime>2018-09-07T16:42:20</mes:RequestDateTime>\r
+            <mes:Source>\r
+               <mes:Domain>SALES</mes:Domain>\r
+               <mes:Channel>SanityTesting</mes:Channel>\r
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>\r
+               <mes:Name>Pricing Services</mes:Name>\r
+               <mes:User>PS Testing</mes:User>\r
+            </mes:Source>\r
+         </mes:RequestHeader>\r
+         <gen:IndicativePriceFlag>false</gen:IndicativePriceFlag>\r
+         <gen:CurrentFlexDetails>\r
+            <prod:FlexFactorOnCurrentPolicy>1.0</prod:FlexFactorOnCurrentPolicy>\r
+         </gen:CurrentFlexDetails>\r
+         <gen:RenewalFlexDetails>\r
+            <prod:FlexFactor>1.0</prod:FlexFactor>\r
+            <prod:FlexFactorCalculatedFlag>true</prod:FlexFactorCalculatedFlag>\r
+         </gen:RenewalFlexDetails>\r
+         <gen:PaymentType>CMM</gen:PaymentType>\r
+         <gen:ProductList>\r
+            <prod:EffectivePriceDateTime>2018-09-07T16:42:20</prod:EffectivePriceDateTime>\r
+            <prod:PolicyStartDateTime>2018-09-07T16:42:20</prod:PolicyStartDateTime>\r
+            <prod:PolicyEndDateTime>2019-09-07T16:42:20</prod:PolicyEndDateTime>\r
+            <prod:SourceGroup>sample</prod:SourceGroup>\r
+            <prod:SourceCode>INS04</prod:SourceCode>\r
+            <prod:Currency>GBP</prod:Currency>\r
+            <gen:MembershipTenure>5</gen:MembershipTenure>\r
+            <gen:ManConYear1>true</gen:ManConYear1>\r
+            <gen:Product>\r
+               <prod:ProductCode>PRD_UK_0001</prod:ProductCode>\r
+            </gen:Product>\r
+            <gen:CoveredPersons>3</gen:CoveredPersons>\r
+         </gen:ProductList>\r
+         <gen:CustomerDetails>\r
+            <gen:Postcode>BA25NB</gen:Postcode>\r
+            <mem:MembershipNumber>6356010000005367</mem:MembershipNumber>\r
+         </gen:CustomerDetails>\r
+      </gen:GenerateQuoteRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="9f71665e-63a4-4334-aaca-7b4c2301799f" name="Request 10">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://0.0.0.0:18047/SOAPServiceBinding/BSROS_GenerateQuote_RNL/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL_2" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2" xmlns:mem="http://www.theaa.com/CommonServices/Data/Membership.2" xmlns:veh="http://www.theaa.com/CommonServices/Data/General/Vehicle">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <gen:GenerateQuoteRequest>\r
+         <mes:RequestHeader>\r
+            <!--Optional:-->\r
+            <com:CorrelationId>?</com:CorrelationId>\r
+            <mes:TransactionId>?</mes:TransactionId>\r
+            <mes:Version>?</mes:Version>\r
+            <mes:RequestDateTime>?</mes:RequestDateTime>\r
+            <mes:Source>\r
+               <mes:Domain>?</mes:Domain>\r
+               <mes:Channel>?</mes:Channel>\r
+               <mes:LineOfBusiness>?</mes:LineOfBusiness>\r
+               <mes:Name>?</mes:Name>\r
+               <!--Optional:-->\r
+               <mes:Address>?</mes:Address>\r
+               <!--Optional:-->\r
+               <mes:InstanceId>?</mes:InstanceId>\r
+               <!--Optional:-->\r
+               <mes:ApplicationVersion>?</mes:ApplicationVersion>\r
+               <!--Optional:-->\r
+               <mes:User>?</mes:User>\r
+            </mes:Source>\r
+            <!--Optional:-->\r
+            <mes:MIContext>?</mes:MIContext>\r
+         </mes:RequestHeader>\r
+         <!--Optional:-->\r
+         <gen:IndicativePriceFlag>?</gen:IndicativePriceFlag>\r
+         <gen:CurrentFlexDetails>\r
+            <prod:FlexFactorOnCurrentPolicy>?</prod:FlexFactorOnCurrentPolicy>\r
+         </gen:CurrentFlexDetails>\r
+         <!--Optional:-->\r
+         <gen:RenewalFlexDetails>\r
+            <prod:FlexFactor>?</prod:FlexFactor>\r
+            <prod:FlexFactorCalculatedFlag>?</prod:FlexFactorCalculatedFlag>\r
+         </gen:RenewalFlexDetails>\r
+         <!--Optional:-->\r
+         <gen:RepriceDetails>\r
+            <gen:RepriceAction>?</gen:RepriceAction>\r
+            <gen:OriginalPrice>?</gen:OriginalPrice>\r
+            <prod:RelatedAdjustmentCode>?</prod:RelatedAdjustmentCode>\r
+            <!--Optional:-->\r
+            <gen:RepriceThreshold>?</gen:RepriceThreshold>\r
+         </gen:RepriceDetails>\r
+         <gen:PaymentType>?</gen:PaymentType>\r
+         <gen:ProductList>\r
+            <prod:EffectivePriceDateTime>?</prod:EffectivePriceDateTime>\r
+            <prod:PolicyStartDateTime>?</prod:PolicyStartDateTime>\r
+            <prod:PolicyEndDateTime>?</prod:PolicyEndDateTime>\r
+            <!--Optional:-->\r
+            <prod:OfferCodeDetailList>\r
+               <!--1 or more repetitions:-->\r
+               <prod:OfferCodeDetail>\r
+                  <prod:OfferCode>?</prod:OfferCode>\r
+                  <prod:OfferCodeApplicationLevel>?</prod:OfferCodeApplicationLevel>\r
+               </prod:OfferCodeDetail>\r
+            </prod:OfferCodeDetailList>\r
+            <!--Optional:-->\r
+            <prod:SourceGroup>?</prod:SourceGroup>\r
+            <prod:SourceCode>?</prod:SourceCode>\r
+            <prod:Currency>?</prod:Currency>\r
+            <!--Optional:-->\r
+            <gen:MembershipTenure>?</gen:MembershipTenure>\r
+            <!--Optional:-->\r
+            <gen:ManConYear1>?</gen:ManConYear1>\r
+            <!--Optional:-->\r
+            <prod:AssociatesList>\r
+               <!--1 or more repetitions:-->\r
+               <prod:Associate>\r
+                  <prod:AssociateType>?</prod:AssociateType>\r
+                  <prod:NumberOfFreeAssociates>?</prod:NumberOfFreeAssociates>\r
+                  <prod:RelatedOfferCode>?</prod:RelatedOfferCode>\r
+               </prod:Associate>\r
+            </prod:AssociatesList>\r
+            <!--1 or more repetitions:-->\r
+            <gen:Product>\r
+               <prod:ProductCode>?</prod:ProductCode>\r
+               <!--Optional:-->\r
+               <prod:CoverageList>\r
+                  <!--1 or more repetitions:-->\r
+                  <prod:Coverage>\r
+                     <prod:CoverageCode>?</prod:CoverageCode>\r
+                     <!--Optional:-->\r
+                     <prod:LimitList>\r
+                        <!--1 or more repetitions:-->\r
+                        <prod:Limit>\r
+                           <prod:Type>?</prod:Type>\r
+                           <prod:Value>?</prod:Value>\r
+                        </prod:Limit>\r
+                     </prod:LimitList>\r
+                     <!--Optional:-->\r
+                     <prod:AdditionalData>\r
+                        <prod:Type>?</prod:Type>\r
+                        <prod:Value>?</prod:Value>\r
+                     </prod:AdditionalData>\r
+                  </prod:Coverage>\r
+               </prod:CoverageList>\r
+            </gen:Product>\r
+            <!--Optional:-->\r
+            <gen:VehicleAgeList>\r
+               <!--1 or more repetitions:-->\r
+               <gen:VehicleAge>?</gen:VehicleAge>\r
+            </gen:VehicleAgeList>\r
+            <gen:CoveredPersons>?</gen:CoveredPersons>\r
+            <!--Optional:-->\r
+            <prod:RequestSurchargeAndFeeList>\r
+               <!--1 or more repetitions:-->\r
+               <prod:SurchargeOrFee>\r
+                  <prod:SurchargeRequestType>?</prod:SurchargeRequestType>\r
+                  <prod:IsWaived>?</prod:IsWaived>\r
+                  <prod:WaivedReason>?</prod:WaivedReason>\r
+                  <prod:SurchargeOrFeeCode>?</prod:SurchargeOrFeeCode>\r
+               </prod:SurchargeOrFee>\r
+            </prod:RequestSurchargeAndFeeList>\r
+            <!--Optional:-->\r
+            <prod:AgentDiscountRequestedList>\r
+               <!--1 or more repetitions:-->\r
+               <prod:AgentDiscountRequested>\r
+                  <prod:AgentDiscountCode>?</prod:AgentDiscountCode>\r
+                  <prod:AgentDiscountType>?</prod:AgentDiscountType>\r
+                  <prod:AgentDiscountValue>?</prod:AgentDiscountValue>\r
+               </prod:AgentDiscountRequested>\r
+            </prod:AgentDiscountRequestedList>\r
+         </gen:ProductList>\r
+         <gen:CustomerDetails>\r
+            <gen:Postcode>?</gen:Postcode>\r
+            <mem:MembershipNumber>?</mem:MembershipNumber>\r
+         </gen:CustomerDetails>\r
+         <!--Optional:-->\r
+         <gen:SurchargeFee>?</gen:SurchargeFee>\r
+         <!--Optional:-->\r
+         <gen:RenewalRiskData>\r
+            <gen:CurrentPolicyDetails>\r
+               <!--1 or more repetitions:-->\r
+               <gen:Product>\r
+                  <prod:ProductCode>?</prod:ProductCode>\r
+                  <!--Optional:-->\r
+                  <prod:CoverageList>\r
+                     <!--1 or more repetitions:-->\r
+                     <prod:Coverage>\r
+                        <prod:CoverageCode>?</prod:CoverageCode>\r
+                        <!--Optional:-->\r
+                        <prod:LimitList>\r
+                           <!--1 or more repetitions:-->\r
+                           <prod:Limit>\r
+                              <prod:Type>?</prod:Type>\r
+                              <prod:Value>?</prod:Value>\r
+                           </prod:Limit>\r
+                        </prod:LimitList>\r
+                        <!--Optional:-->\r
+                        <prod:AdditionalData>\r
+                           <prod:Type>?</prod:Type>\r
+                           <prod:Value>?</prod:Value>\r
+                        </prod:AdditionalData>\r
+                     </prod:Coverage>\r
+                  </prod:CoverageList>\r
+               </gen:Product>\r
+               <gen:PartialFreeMembershipFlag>?</gen:PartialFreeMembershipFlag>\r
+               <gen:RecordedPaymentType>?</gen:RecordedPaymentType>\r
+               <gen:RecordedPaymentMeans>?</gen:RecordedPaymentMeans>\r
+               <!--Optional:-->\r
+               <gen:PartyList>\r
+                  <!--1 or more repetitions:-->\r
+                  <gen:Party>\r
+                     <gen:PartyId>?</gen:PartyId>\r
+                     <gen:MainPolicyHolderFlag>?</gen:MainPolicyHolderFlag>\r
+                     <gen:DateOfBirth>?</gen:DateOfBirth>\r
+                  </gen:Party>\r
+               </gen:PartyList>\r
+               <!--Optional:-->\r
+               <gen:VehicleDetailsList>\r
+                  <!--1 or more repetitions:-->\r
+                  <gen:VehicleDetails>\r
+                     <!--Optional:-->\r
+                     <veh:ABIBrokerNetCode IsAACode="?">?</veh:ABIBrokerNetCode>\r
+                     <!--Optional:-->\r
+                     <veh:Fuel>\r
+                        <!--Optional:-->\r
+                        <veh:Code>?</veh:Code>\r
+                        <!--Optional:-->\r
+                        <veh:Description>?</veh:Description>\r
+                     </veh:Fuel>\r
+                     <!--Optional:-->\r
+                     <veh:DoorPlan>\r
+                        <!--Optional:-->\r
+                        <veh:Code>?</veh:Code>\r
+                        <!--Optional:-->\r
+                        <veh:Description>?</veh:Description>\r
+                     </veh:DoorPlan>\r
+                     <!--Optional:-->\r
+                     <veh:EngineCapacity>?</veh:EngineCapacity>\r
+                     <!--Optional:-->\r
+                     <veh:YearOfManufacture>?</veh:YearOfManufacture>\r
+                     <gen:VehicleAge>?</gen:VehicleAge>\r
+                  </gen:VehicleDetails>\r
+               </gen:VehicleDetailsList>\r
+            </gen:CurrentPolicyDetails>\r
+            <gen:InScopeFlexFlag>?</gen:InScopeFlexFlag>\r
+            <!--Optional:-->\r
+            <gen:OptInOfferFlag>?</gen:OptInOfferFlag>\r
+         </gen:RenewalRiskData>\r
+         <!--Optional:-->\r
+         <gen:LastTransactionRecord>\r
+            <gen:TransactionRecord>\r
+               <gen:TransactionType>?</gen:TransactionType>\r
+               <gen:TransactionStartDateTime>?</gen:TransactionStartDateTime>\r
+               <gen:ProductList>\r
+                  <prod:PaymentType>?</prod:PaymentType>\r
+                  <prod:Currency>?</prod:Currency>\r
+                  <!--1 or more repetitions:-->\r
+                  <gen:Product>\r
+                     <prod:ProductCode>?</prod:ProductCode>\r
+                     <prod:ProductPriceName>?</prod:ProductPriceName>\r
+                     <prod:PriceList>\r
+                        <!--1 or more repetitions:-->\r
+                        <prod:Price>\r
+                           <prod:PriceElementType>?</prod:PriceElementType>\r
+                           <prod:PriceBreakdown>\r
+                              <prod:CorePrice>\r
+                                 <prod:NetRate>?</prod:NetRate>\r
+                                 <prod:NetRateTax>?</prod:NetRateTax>\r
+                                 <prod:Commission>?</prod:Commission>\r
+                                 <prod:CommissionTax>?</prod:CommissionTax>\r
+                                 <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>\r
+                                 <prod:TaxPercentage>?</prod:TaxPercentage>\r
+                                 <prod:TaxTotal>?</prod:TaxTotal>\r
+                                 <prod:Total>?</prod:Total>\r
+                              </prod:CorePrice>\r
+                              <prod:ArrangementFee>\r
+                                 <prod:Fee>?</prod:Fee>\r
+                                 <prod:FeeTax>?</prod:FeeTax>\r
+                                 <!--Optional:-->\r
+                                 <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>\r
+                                 <!--Optional:-->\r
+                                 <prod:TaxPercentage>?</prod:TaxPercentage>\r
+                                 <prod:Total>?</prod:Total>\r
+                              </prod:ArrangementFee>\r
+                              <!--Optional:-->\r
+                              <prod:OfferCodeDiscountList>\r
+                                 <!--1 or more repetitions:-->\r
+                                 <prod:OfferCodeDiscount>\r
+                                    <prod:Code>?</prod:Code>\r
+                                    <prod:DiscountApplicationApproach>?</prod:DiscountApplicationApproach>\r
+                                    <prod:NetRate>?</prod:NetRate>\r
+                                    <prod:NetRateTax>?</prod:NetRateTax>\r
+                                    <prod:Commission>?</prod:Commission>\r
+                                    <prod:CommissionTax>?</prod:CommissionTax>\r
+                                    <prod:ArrangementFee>?</prod:ArrangementFee>\r
+                                    <prod:ArrangementFeeTax>?</prod:ArrangementFeeTax>\r
+                                    <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>\r
+                                    <prod:TaxPercentage>?</prod:TaxPercentage>\r
+                                    <prod:Total>?</prod:Total>\r
+                                 </prod:OfferCodeDiscount>\r
+                              </prod:OfferCodeDiscountList>\r
+                              <!--Optional:-->\r
+                              <prod:AgentDiscountList>\r
+                                 <!--1 or more repetitions:-->\r
+                                 <prod:AgentDiscount>\r
+                                    <prod:Code>?</prod:Code>\r
+                                    <prod:DiscountApplicationApproach>?</prod:DiscountApplicationApproach>\r
+                                    <prod:NetRate>?</prod:NetRate>\r
+                                    <prod:NetRateTax>?</prod:NetRateTax>\r
+                                    <prod:Commission>?</prod:Commission>\r
+                                    <prod:CommissionTax>?</prod:CommissionTax>\r
+                                    <prod:ArrangementFee>?</prod:ArrangementFee>\r
+                                    <prod:ArrangementFeeTax>?</prod:ArrangementFeeTax>\r
+                                    <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>\r
+                                    <prod:TaxPercentage>?</prod:TaxPercentage>\r
+                                    <prod:Total>?</prod:Total>\r
+                                 </prod:AgentDiscount>\r
+                              </prod:AgentDiscountList>\r
+                              <!--Optional:-->\r
+                              <prod:SystemDiscountList>\r
+                                 <!--1 or more repetitions:-->\r
+                                 <prod:SystemDiscount>\r
+                                    <prod:Code>?</prod:Code>\r
+                                    <prod:SystemDiscountCategory>?</prod:SystemDiscountCategory>\r
+                                    <prod:DiscountApplicationApproach>?</prod:DiscountApplicationApproach>\r
+                                    <prod:NetRate>?</prod:NetRate>\r
+                                    <prod:NetRateTax>?</prod:NetRateTax>\r
+                                    <prod:Commission>?</prod:Commission>\r
+                                    <prod:CommissionTax>?</prod:CommissionTax>\r
+                                    <prod:ArrangementFee>?</prod:ArrangementFee>\r
+                                    <prod:ArrangementFeeTax>?</prod:ArrangementFeeTax>\r
+                                    <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>\r
+                                    <prod:TaxPercentage>?</prod:TaxPercentage>\r
+                                    <prod:Total>?</prod:Total>\r
+                                 </prod:SystemDiscount>\r
+                              </prod:SystemDiscountList>\r
+                              <!--Optional:-->\r
+                              <prod:AccountingTotals>\r
+                                 <prod:CoreDiscountsTotal>?</prod:CoreDiscountsTotal>\r
+                                 <prod:CoreDiscountsTaxTotal>?</prod:CoreDiscountsTaxTotal>\r
+                                 <prod:CoreCommissionDiscountsTotal>?</prod:CoreCommissionDiscountsTotal>\r
+                                 <prod:CoreNetRateDiscountsTotal>?</prod:CoreNetRateDiscountsTotal>\r
+                                 <prod:ArrangementFeeGrandDiscountsTotal>?</prod:ArrangementFeeGrandDiscountsTotal>\r
+                                 <prod:ArrangementFeeTaxDiscountsTotal>?</prod:ArrangementFeeTaxDiscountsTotal>\r
+                                 <prod:ArrangementFeeDiscountsTotal>?</prod:ArrangementFeeDiscountsTotal>\r
+                              </prod:AccountingTotals>\r
+                           </prod:PriceBreakdown>\r
+                           <prod:TaxType>?</prod:TaxType>\r
+                           <prod:TaxDate>?</prod:TaxDate>\r
+                           <prod:DateInceptedOnPolicy>?</prod:DateInceptedOnPolicy>\r
+                           <prod:RelativityPriceFactor>?</prod:RelativityPriceFactor>\r
+                           <prod:ExtrapolationFactor>?</prod:ExtrapolationFactor>\r
+                           <prod:ArrangementFeeTotal>?</prod:ArrangementFeeTotal>\r
+                           <prod:TotalLessArrangementFeeTotal>?</prod:TotalLessArrangementFeeTotal>\r
+                           <prod:TotalLessDiscounts>?</prod:TotalLessDiscounts>\r
+                           <prod:Total>?</prod:Total>\r
+                        </prod:Price>\r
+                        <!--Zero or more repetitions:-->\r
+                        <prod:PolicyPrice>\r
+                           <prod:PriceElementType>?</prod:PriceElementType>\r
+                           <prod:PriceBreakdown>\r
+                              <prod:CorePrice>\r
+                                 <prod:NetRate>?</prod:NetRate>\r
+                                 <prod:NetRateTax>?</prod:NetRateTax>\r
+                                 <prod:Commission>?</prod:Commission>\r
+                                 <prod:CommissionTax>?</prod:CommissionTax>\r
+                                 <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>\r
+                                 <prod:TaxPercentage>?</prod:TaxPercentage>\r
+                                 <prod:TaxTotal>?</prod:TaxTotal>\r
+                                 <prod:Total>?</prod:Total>\r
+                              </prod:CorePrice>\r
+                              <prod:ArrangementFee>\r
+                                 <prod:Fee>?</prod:Fee>\r
+                                 <prod:FeeTax>?</prod:FeeTax>\r
+                                 <!--Optional:-->\r
+                                 <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>\r
+                                 <!--Optional:-->\r
+                                 <prod:TaxPercentage>?</prod:TaxPercentage>\r
+                                 <prod:Total>?</prod:Total>\r
+                              </prod:ArrangementFee>\r
+                              <!--Optional:-->\r
+                              <prod:OfferCodeDiscountList>\r
+                                 <!--1 or more repetitions:-->\r
+                                 <prod:OfferCodeDiscount>\r
+                                    <prod:Code>?</prod:Code>\r
+                                    <prod:DiscountApplicationApproach>?</prod:DiscountApplicationApproach>\r
+                                    <prod:NetRate>?</prod:NetRate>\r
+                                    <prod:NetRateTax>?</prod:NetRateTax>\r
+                                    <prod:Commission>?</prod:Commission>\r
+                                    <prod:CommissionTax>?</prod:CommissionTax>\r
+                                    <prod:ArrangementFee>?</prod:ArrangementFee>\r
+                                    <prod:ArrangementFeeTax>?</prod:ArrangementFeeTax>\r
+                                    <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>\r
+                                    <prod:TaxPercentage>?</prod:TaxPercentage>\r
+                                    <prod:Total>?</prod:Total>\r
+                                 </prod:OfferCodeDiscount>\r
+                              </prod:OfferCodeDiscountList>\r
+                              <!--Optional:-->\r
+                              <prod:AgentDiscountList>\r
+                                 <!--1 or more repetitions:-->\r
+                                 <prod:AgentDiscount>\r
+                                    <prod:Code>?</prod:Code>\r
+                                    <prod:DiscountApplicationApproach>?</prod:DiscountApplicationApproach>\r
+                                    <prod:NetRate>?</prod:NetRate>\r
+                                    <prod:NetRateTax>?</prod:NetRateTax>\r
+                                    <prod:Commission>?</prod:Commission>\r
+                                    <prod:CommissionTax>?</prod:CommissionTax>\r
+                                    <prod:ArrangementFee>?</prod:ArrangementFee>\r
+                                    <prod:ArrangementFeeTax>?</prod:ArrangementFeeTax>\r
+                                    <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>\r
+                                    <prod:TaxPercentage>?</prod:TaxPercentage>\r
+                                    <prod:Total>?</prod:Total>\r
+                                 </prod:AgentDiscount>\r
+                              </prod:AgentDiscountList>\r
+                              <!--Optional:-->\r
+                              <prod:SystemDiscountList>\r
+                                 <!--1 or more repetitions:-->\r
+                                 <prod:SystemDiscount>\r
+                                    <prod:Code>?</prod:Code>\r
+                                    <prod:SystemDiscountCategory>?</prod:SystemDiscountCategory>\r
+                                    <prod:DiscountApplicationApproach>?</prod:DiscountApplicationApproach>\r
+                                    <prod:NetRate>?</prod:NetRate>\r
+                                    <prod:NetRateTax>?</prod:NetRateTax>\r
+                                    <prod:Commission>?</prod:Commission>\r
+                                    <prod:CommissionTax>?</prod:CommissionTax>\r
+                                    <prod:ArrangementFee>?</prod:ArrangementFee>\r
+                                    <prod:ArrangementFeeTax>?</prod:ArrangementFeeTax>\r
+                                    <prod:InternallyFundedDiscount>?</prod:InternallyFundedDiscount>\r
+                                    <prod:TaxPercentage>?</prod:TaxPercentage>\r
+                                    <prod:Total>?</prod:Total>\r
+                                 </prod:SystemDiscount>\r
+                              </prod:SystemDiscountList>\r
+                              <!--Optional:-->\r
+                              <prod:AccountingTotals>\r
+                                 <prod:CoreDiscountsTotal>?</prod:CoreDiscountsTotal>\r
+                                 <prod:CoreDiscountsTaxTotal>?</prod:CoreDiscountsTaxTotal>\r
+                                 <prod:CoreCommissionDiscountsTotal>?</prod:CoreCommissionDiscountsTotal>\r
+                                 <prod:CoreNetRateDiscountsTotal>?</prod:CoreNetRateDiscountsTotal>\r
+                                 <prod:ArrangementFeeGrandDiscountsTotal>?</prod:ArrangementFeeGrandDiscountsTotal>\r
+                                 <prod:ArrangementFeeTaxDiscountsTotal>?</prod:ArrangementFeeTaxDiscountsTotal>\r
+                                 <prod:ArrangementFeeDiscountsTotal>?</prod:ArrangementFeeDiscountsTotal>\r
+                              </prod:AccountingTotals>\r
+                           </prod:PriceBreakdown>\r
+                           <prod:TaxType>?</prod:TaxType>\r
+                           <prod:TaxDate>?</prod:TaxDate>\r
+                           <prod:DateInceptedOnPolicy>?</prod:DateInceptedOnPolicy>\r
+                           <prod:RelativityPriceFactor>?</prod:RelativityPriceFactor>\r
+                           <prod:ExtrapolationFactor>?</prod:ExtrapolationFactor>\r
+                           <prod:ArrangementFeeTotal>?</prod:ArrangementFeeTotal>\r
+                           <prod:TotalLessArrangementFeeTotal>?</prod:TotalLessArrangementFeeTotal>\r
+                           <prod:TotalLessDiscounts>?</prod:TotalLessDiscounts>\r
+                           <prod:Total>?</prod:Total>\r
+                        </prod:PolicyPrice>\r
+                     </prod:PriceList>\r
+                     <gen:ActionDateTime>?</gen:ActionDateTime>\r
+                  </gen:Product>\r
+                  <!--Zero or more repetitions:-->\r
+                  <prod:SurchargeFeeList>\r
+                     <!--1 or more repetitions:-->\r
+                     <prod:SurchargeFee>\r
+                        <!--Optional:-->\r
+                        <prod:Code>?</prod:Code>\r
+                        <!--Optional:-->\r
+                        <prod:SurchargeRequestType>?</prod:SurchargeRequestType>\r
+                        <!--Optional:-->\r
+                        <prod:IsWaived>?</prod:IsWaived>\r
+                        <!--Optional:-->\r
+                        <prod:TaxType>?</prod:TaxType>\r
+                        <prod:Fee>?</prod:Fee>\r
+                        <prod:FeeTax>?</prod:FeeTax>\r
+                        <prod:TaxPercentage>?</prod:TaxPercentage>\r
+                        <prod:Total>?</prod:Total>\r
+                     </prod:SurchargeFee>\r
+                  </prod:SurchargeFeeList>\r
+               </gen:ProductList>\r
+            </gen:TransactionRecord>\r
+         </gen:LastTransactionRecord>\r
+      </gen:GenerateQuoteRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+</con:operation>
