@@ -37,7 +37,7 @@ out1.close();</script>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file>N:/Road Pricing/00 - NEW FILING STRUCTURE/Testing Team Data/Pricing Service Testing/Testing areas/New business/Offers/10-07-20/Renewal Input For SOAP 10072020.xlsx</file>
+          <file>N:/Road Pricing/00 - NEW FILING STRUCTURE/Testing Team Data/Pricing Service Testing/Testing areas/New business/Offers/10-07-20/Renewal Input For SOAP 05032020.xlsx</file>
           <worksheet>RENEWAL</worksheet>
           <cell>A2</cell>
           <ignoreEmpty>true</ignoreEmpty>
@@ -565,7 +565,7 @@ testRunner.testCase.setPropertyValue( "RENEWALCover",  coverToUse)
 log.info(coverToUse)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Payment" id="6e568886-6503-42b5-8bce-e5740e80c992">
+  <con:testStep type="groovy" name="Payment" id="6e568886-6503-42b5-8bce-e5740e80c992" disabled="true">
     <con:settings/>
     <con:config>
       <script>testRunner.testCase.setPropertyValue( 'ID',  context.expand( '${RenewalE2EAll#ID}' ))
@@ -955,6 +955,7 @@ log.info(paymenttype)
                <prod:OfferCodeDetail>
                   <prod:OfferCode>${RenewalE2EAll#OFFER_CODE}</prod:OfferCode>
                   <prod:OfferCodeApplicationLevel>1</prod:OfferCodeApplicationLevel>
+                  <prod:IsPersistent>true</prod:IsPersistent>
                </prod:OfferCodeDetail>
             </prod:OfferCodeDetailList>
             <prod:SourceGroup>15</prod:SourceGroup>
@@ -984,7 +985,7 @@ log.info(paymenttype)
             ${#TestCase#CurrentPolicyPrice_XML}
          </gen:CurrentPolicyDetails>
       </gen:GenerateQuoteRequest>
-   <gen1:GenerateQuoteRequest xmlns:gen1="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL_2"/></soapenv:Body>
+   <gen1:GenerateQuoteRequest xmlns:gen1="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL_2"><mes:RequestHeader><mes:TransactionId/><mes:Version/><mes:RequestDateTime/><mes:Source><mes:Domain/><mes:Channel/><mes:LineOfBusiness/><mes:Name/></mes:Source></mes:RequestHeader><gen1:CurrentFlexDetails><prod:FlexFactorOnCurrentPolicy/></gen1:CurrentFlexDetails><gen1:PaymentType/><gen1:ProductList><prod:EffectivePriceDateTime/><prod:PolicyStartDateTime/><prod:PolicyEndDateTime/><prod:SourceCode/><prod:Currency/><gen1:CoveredPersons/></gen1:ProductList><gen1:CustomerDetails><gen1:Postcode/><mem:MembershipNumber/></gen1:CustomerDetails></gen1:GenerateQuoteRequest></soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
@@ -1090,7 +1091,7 @@ if(context.expand( '${RenewalE2EAll#BRC}' )=="Y")
 	func_Check(productType,product,"BRC",payment,id)
 }		
 
-testRunner.gotoStepByName("Payment");
+//testRunner.gotoStepByName("Payment");
 
 def func_Check(productType,product,name,payment,id)
 {
@@ -1156,6 +1157,12 @@ def func_Check(productType,product,name,payment,id)
 	func_write(payment,"TotalLessAAFTotal",product,ProdTotalLessAAF)
 	func_write(payment,"TotalLessDisc",product,ProdTotalLessDisc)
 	func_write(payment,"ProductTotal",product,ProdTotal)
+
+
+
+
+
+
 
 	//Transaction Offer validation
 	def OFFER = ""
@@ -1437,15 +1444,15 @@ bw.close();</script>
   <con:properties>
     <con:property>
       <con:name>ProductList_XML</con:name>
-      <con:value>&lt;gen:Product>&lt;prod:ProductCode>PRD_UK_0002&lt;/prod:ProductCode>&lt;/gen:Product></con:value>
+      <con:value>&lt;gen:Product>&lt;prod:ProductCode>PRD_UK_0023&lt;/prod:ProductCode>&lt;/gen:Product></con:value>
     </con:property>
     <con:property>
       <con:name>RoadList</con:name>
-      <con:value/>
+      <con:value>PRD_UK_0023</con:value>
     </con:property>
     <con:property>
       <con:name>RoadNameList</con:name>
-      <con:value/>
+      <con:value>ROPOV</con:value>
     </con:property>
     <con:property>
       <con:name>TaxType</con:name>
@@ -1461,7 +1468,7 @@ bw.close();</script>
     </con:property>
     <con:property>
       <con:name>Renewal_New_ProductList_XML</con:name>
-      <con:value>&lt;gen:Product>&lt;prod:ProductCode>PRD_UK_0012&lt;/prod:ProductCode>&lt;/gen:Product></con:value>
+      <con:value>&lt;gen:Product>&lt;prod:ProductCode>PRD_UK_0023&lt;/prod:ProductCode>&lt;/gen:Product></con:value>
     </con:property>
     <con:property>
       <con:name>RENEWALCover</con:name>
@@ -1473,11 +1480,11 @@ bw.close();</script>
     </con:property>
     <con:property>
       <con:name>TotalOfValuesChecked</con:name>
-      <con:value>66895</con:value>
+      <con:value>30560</con:value>
     </con:property>
     <con:property>
       <con:name>NumOfIterations</con:name>
-      <con:value>597</con:value>
+      <con:value>284</con:value>
     </con:property>
     <con:property>
       <con:name>payment</con:name>
@@ -1485,15 +1492,15 @@ bw.close();</script>
     </con:property>
     <con:property>
       <con:name>CurrentPolicyPrice_XML</con:name>
-      <con:value><![CDATA[<gen:Product><prod:ProductCode>PRD_UK_0002</prod:ProductCode><prod:ProductPriceName>Roadside</prod:ProductPriceName><gen:PriceList><prod:PolicyPrice><prod:PriceElementType/><prod:PriceBreakdown><prod:CorePrice><prod:NetRate>0.0</prod:NetRate><prod:NetRateTax>0.0</prod:NetRateTax><prod:Commission>41.77</prod:Commission><prod:CommissionTax>5.01</prod:CommissionTax><prod:InternallyFundedDiscount>0.0</prod:InternallyFundedDiscount><prod:TaxPercentage>0.12</prod:TaxPercentage><prod:TaxTotal>5.01</prod:TaxTotal><prod:Total>46.78</prod:Total></prod:CorePrice><prod:ArrangementFee><prod:Fee>22.29</prod:Fee><prod:FeeTax>2.67</prod:FeeTax><prod:InternallyFundedDiscount>0.0</prod:InternallyFundedDiscount><prod:TaxPercentage>0.12</prod:TaxPercentage><prod:Total>24.96</prod:Total></prod:ArrangementFee><prod:AccountingTotals><prod:CoreDiscountsTotal>0.0</prod:CoreDiscountsTotal><prod:CoreDiscountsTaxTotal>0.0</prod:CoreDiscountsTaxTotal><prod:CoreCommissionDiscountsTotal>0.0</prod:CoreCommissionDiscountsTotal><prod:CoreNetRateDiscountsTotal>0.0</prod:CoreNetRateDiscountsTotal><prod:ArrangementFeeGrandDiscountsTotal>0.0</prod:ArrangementFeeGrandDiscountsTotal><prod:ArrangementFeeTaxDiscountsTotal>0.0</prod:ArrangementFeeTaxDiscountsTotal><prod:ArrangementFeeDiscountsTotal>0.0</prod:ArrangementFeeDiscountsTotal></prod:AccountingTotals></prod:PriceBreakdown><prod:TaxType>I</prod:TaxType><prod:TaxDate>2019-07-10T00:00:00</prod:TaxDate><prod:DateInceptedOnPolicy>2019-07-10T00:00:00</prod:DateInceptedOnPolicy><prod:RelativityPriceFactor>1.0</prod:RelativityPriceFactor><prod:ExtrapolationFactor>1.0</prod:ExtrapolationFactor><prod:ArrangementFeeTotal>24.96</prod:ArrangementFeeTotal><prod:TotalLessArrangementFeeTotal>46.78</prod:TotalLessArrangementFeeTotal><prod:TotalLessDiscounts>71.74</prod:TotalLessDiscounts><prod:Total>71.74</prod:Total></prod:PolicyPrice></gen:PriceList></gen:Product>]]></con:value>
+      <con:value><![CDATA[<gen:Product><prod:ProductCode>PRD_UK_0023</prod:ProductCode><prod:ProductPriceName>ROPOV</prod:ProductPriceName><gen:PriceList><prod:PolicyPrice><prod:PriceElementType/><prod:PriceBreakdown><prod:CorePrice><prod:NetRate>0.0</prod:NetRate><prod:NetRateTax>0.0</prod:NetRateTax><prod:Commission>40.21</prod:Commission><prod:CommissionTax>4.83</prod:CommissionTax><prod:InternallyFundedDiscount>0.0</prod:InternallyFundedDiscount><prod:TaxPercentage>0.12</prod:TaxPercentage><prod:TaxTotal>4.83</prod:TaxTotal><prod:Total>45.04</prod:Total></prod:CorePrice><prod:ArrangementFee><prod:Fee>8.89</prod:Fee><prod:FeeTax>1.07</prod:FeeTax><prod:InternallyFundedDiscount>0.0</prod:InternallyFundedDiscount><prod:TaxPercentage>0.12</prod:TaxPercentage><prod:Total>9.96</prod:Total></prod:ArrangementFee><prod:AccountingTotals><prod:CoreDiscountsTotal>0.0</prod:CoreDiscountsTotal><prod:CoreDiscountsTaxTotal>0.0</prod:CoreDiscountsTaxTotal><prod:CoreCommissionDiscountsTotal>0.0</prod:CoreCommissionDiscountsTotal><prod:CoreNetRateDiscountsTotal>0.0</prod:CoreNetRateDiscountsTotal><prod:ArrangementFeeGrandDiscountsTotal>0.0</prod:ArrangementFeeGrandDiscountsTotal><prod:ArrangementFeeTaxDiscountsTotal>0.0</prod:ArrangementFeeTaxDiscountsTotal><prod:ArrangementFeeDiscountsTotal>0.0</prod:ArrangementFeeDiscountsTotal></prod:AccountingTotals></prod:PriceBreakdown><prod:TaxType>I</prod:TaxType><prod:TaxDate>2020-07-10T00:00:00</prod:TaxDate><prod:DateInceptedOnPolicy>2020-07-10T00:00:00</prod:DateInceptedOnPolicy><prod:RelativityPriceFactor>1.0</prod:RelativityPriceFactor><prod:ExtrapolationFactor>1.0</prod:ExtrapolationFactor><prod:ArrangementFeeTotal>9.96</prod:ArrangementFeeTotal><prod:TotalLessArrangementFeeTotal>45.04</prod:TotalLessArrangementFeeTotal><prod:TotalLessDiscounts>55.0</prod:TotalLessDiscounts><prod:Total>55.0</prod:Total></prod:PolicyPrice></gen:PriceList></gen:Product>]]></con:value>
     </con:property>
     <con:property>
       <con:name>ID</con:name>
-      <con:value>213</con:value>
+      <con:value>284</con:value>
     </con:property>
     <con:property>
       <con:name>File</con:name>
-      <con:value>N:/Systems_development/RIO/Road Renewals/Soap UI/Test Results/RenewalE2E/RenewalE2Eresults20200109T170745.txt</con:value>
+      <con:value>N:/Systems_development/RIO/Road Renewals/Soap UI/Test Results/RenewalE2E/RenewalE2Eresults20200305T144049.txt</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

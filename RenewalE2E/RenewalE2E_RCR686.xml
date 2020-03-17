@@ -1861,64 +1861,64 @@ def func_write (payment,element,name,RadarValue)
         <con:endpoint>http://rh0124v:18047/SOAPServiceBinding/BSROS_GenerateQuote_RNL/</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL_3" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2" xmlns:mem="http://www.theaa.com/CommonServices/Data/Membership.2" xmlns:veh="http://www.theaa.com/CommonServices/Data/General/Vehicle">
 
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <gen:GenerateQuoteRequest>\r
-         <mes:RequestHeader>\r
-            <mes:TransactionId>RNLQ-1903-666</mes:TransactionId>\r
-            <mes:Version>1.0</mes:Version>\r
-            <mes:RequestDateTime>${Renewal686#YR2POLICYSTARTDATE}T00:00:00</mes:RequestDateTime>\r
-            <mes:Source>\r
-               <mes:Domain>SALES</mes:Domain>\r
-               <mes:Channel>SanityTesting</mes:Channel>\r
-               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>\r
-               <mes:Name>Pricing Services</mes:Name>\r
-               <mes:User>PS Testing</mes:User>\r
-            </mes:Source>\r
-         </mes:RequestHeader>\r
-         <gen:IndicativePriceFlag>false</gen:IndicativePriceFlag>\r
-         <gen:CurrentFlexDetails>\r
-            <prod:FlexFactorOnCurrentPolicy>1</prod:FlexFactorOnCurrentPolicy>\r
-         </gen:CurrentFlexDetails>\r
-         <gen:RenewalFlexDetails>\r
-            <prod:FlexFactor>${Renewal686#FlexFactor}</prod:FlexFactor>\r
-            <prod:FlexFactorCalculatedFlag>true</prod:FlexFactorCalculatedFlag>\r
-         </gen:RenewalFlexDetails>\r
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gen:GenerateQuoteRequest>
+         <mes:RequestHeader>
+            <mes:TransactionId>RNLQ-1903-666</mes:TransactionId>
+            <mes:Version>1.0</mes:Version>
+            <mes:RequestDateTime>${Renewal686#YR2POLICYSTARTDATE}T00:00:00</mes:RequestDateTime>
+            <mes:Source>
+               <mes:Domain>SALES</mes:Domain>
+               <mes:Channel>SanityTesting</mes:Channel>
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>
+               <mes:Name>Pricing Services</mes:Name>
+               <mes:User>PS Testing</mes:User>
+            </mes:Source>
+         </mes:RequestHeader>
+         <gen:IndicativePriceFlag>false</gen:IndicativePriceFlag>
+         <gen:CurrentFlexDetails>
+            <prod:FlexFactorOnCurrentPolicy>1</prod:FlexFactorOnCurrentPolicy>
+         </gen:CurrentFlexDetails>
+         <gen:RenewalFlexDetails>
+            <prod:FlexFactor>${Renewal686#FlexFactor}</prod:FlexFactor>
+            <prod:FlexFactorCalculatedFlag>true</prod:FlexFactorCalculatedFlag>
+         </gen:RenewalFlexDetails>
         ${#TestCase#Reprice}
-         <gen:PaymentType>${#TestCase#payment}</gen:PaymentType>\r
-         <gen:ProductList>\r
-            <prod:EffectivePriceDateTime>${Renewal686#YR2POLICYSTARTDATE}T00:00:00</prod:EffectivePriceDateTime>\r
-            <prod:PolicyStartDateTime>${Renewal686#YR2POLICYSTARTDATE}T00:00:00</prod:PolicyStartDateTime>\r
-            <prod:PolicyEndDateTime>${Renewal686#YR2POLICYENDDATE}T00:00:00</prod:PolicyEndDateTime>\r
+         <gen:PaymentType>${#TestCase#payment}</gen:PaymentType>
+         <gen:ProductList>
+            <prod:EffectivePriceDateTime>${Renewal686#YR2POLICYSTARTDATE}T00:00:00</prod:EffectivePriceDateTime>
+            <prod:PolicyStartDateTime>${Renewal686#YR2POLICYSTARTDATE}T00:00:00</prod:PolicyStartDateTime>
+            <prod:PolicyEndDateTime>${Renewal686#YR2POLICYENDDATE}T00:00:00</prod:PolicyEndDateTime>
             
-            <prod:SourceGroup>15</prod:SourceGroup>\r
-            <prod:SourceCode>W1037</prod:SourceCode>\r
-            <prod:Currency>GBP</prod:Currency>\r
-            <gen:MembershipTenure>1</gen:MembershipTenure>\r
-            ${#TestCase#Renewal_New_ProductList_XML}\r
-            <gen:CoveredPersons>${#TestCase#RENEWALCover}</gen:CoveredPersons>\r
-         </gen:ProductList>\r
-         <gen:CustomerDetails>\r
-            <gen:Postcode>RG214EA</gen:Postcode>\r
-            <mem:MembershipNumber>6356011512658868</mem:MembershipNumber>\r
-         </gen:CustomerDetails>\r
-         <gen:RenewalRiskData>\r
-            <gen:PartialFreeMembershipFlag>false</gen:PartialFreeMembershipFlag>\r
-            <gen:RecordedPaymentType>${#TestCase#payment}</gen:RecordedPaymentType>\r
-            <gen:RecordedPaymentMeans>DD</gen:RecordedPaymentMeans>\r
-            <gen:InScopeFlexFlag>true</gen:InScopeFlexFlag>\r
-            <gen:OptInOfferFlag>true</gen:OptInOfferFlag>\r
-         </gen:RenewalRiskData>\r
-         <gen:CurrentPolicyDetails>\r
-            <prod:PaymentType>${#TestCase#payment}</prod:PaymentType>\r
-            <prod:PolicyStartDateTime>${Renewal686#YR1POLICYSTARTDATE}T00:00:00</prod:PolicyStartDateTime>\r
-            <prod:PolicyEndDateTime>${Renewal686#YR1POLICYENDDATE}T00:00:00</prod:PolicyEndDateTime>\r
-            <prod:CoveredPersons>${#TestCase#Cover}</prod:CoveredPersons>\r
-            <prod:Currency>GBP</prod:Currency>\r
-            ${#TestCase#CurrentPolicyPrice_XML}\r
-         </gen:CurrentPolicyDetails>\r
-      </gen:GenerateQuoteRequest>\r
-   </soapenv:Body>\r
+            <prod:SourceGroup>15</prod:SourceGroup>
+            <prod:SourceCode>W1037</prod:SourceCode>
+            <prod:Currency>GBP</prod:Currency>
+            <gen:MembershipTenure>1</gen:MembershipTenure>
+            ${#TestCase#Renewal_New_ProductList_XML}
+            <gen:CoveredPersons>${#TestCase#RENEWALCover}</gen:CoveredPersons>
+         </gen:ProductList>
+         <gen:CustomerDetails>
+            <gen:Postcode>RG214EA</gen:Postcode>
+            <mem:MembershipNumber>6356011512658868</mem:MembershipNumber>
+         </gen:CustomerDetails>
+         <gen:RenewalRiskData>
+            <gen:PartialFreeMembershipFlag>false</gen:PartialFreeMembershipFlag>
+            <gen:RecordedPaymentType>${#TestCase#payment}</gen:RecordedPaymentType>
+            <gen:RecordedPaymentMeans>DD</gen:RecordedPaymentMeans>
+            <gen:InScopeFlexFlag>true</gen:InScopeFlexFlag>
+            <gen:OptInOfferFlag>true</gen:OptInOfferFlag>
+         </gen:RenewalRiskData>
+         <gen:CurrentPolicyDetails>
+            <prod:PaymentType>${#TestCase#payment}</prod:PaymentType>
+            <prod:PolicyStartDateTime>${Renewal686#YR1POLICYSTARTDATE}T00:00:00</prod:PolicyStartDateTime>
+            <prod:PolicyEndDateTime>${Renewal686#YR1POLICYENDDATE}T00:00:00</prod:PolicyEndDateTime>
+            <prod:CoveredPersons>${#TestCase#Cover}</prod:CoveredPersons>
+            <prod:Currency>GBP</prod:Currency>
+            ${#TestCase#CurrentPolicyPrice_XML}
+         </gen:CurrentPolicyDetails>
+      </gen:GenerateQuoteRequest>
+   <gen1:GenerateQuoteRequest xmlns:gen1="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL_2"/></soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
@@ -2385,7 +2385,7 @@ bw.close();</script>
   <con:properties>
     <con:property>
       <con:name>ProductList_XML</con:name>
-      <con:value>&lt;gen:Product>&lt;prod:ProductCode>&lt;/prod:ProductCode>&lt;/gen:Product></con:value>
+      <con:value><![CDATA[<gen:Product><prod:ProductCode>PRD_UK_0001</prod:ProductCode></gen:Product><gen:Product><prod:ProductCode>PRD_UK_0004</prod:ProductCode></gen:Product><gen:Product><prod:ProductCode>PRD_UK_0018</prod:ProductCode></gen:Product>]]></con:value>
     </con:property>
     <con:property>
       <con:name>RoadList</con:name>
@@ -2401,19 +2401,19 @@ bw.close();</script>
     </con:property>
     <con:property>
       <con:name>Cover</con:name>
-      <con:value/>
+      <con:value>1</con:value>
     </con:property>
     <con:property>
       <con:name>BRCList_XML</con:name>
-      <con:value/>
+      <con:value><![CDATA[<gen:VehicleAgeList><gen:VehicleAge>8</gen:VehicleAge><gen:VehicleAge>8</gen:VehicleAge><gen:VehicleAge>14</gen:VehicleAge><gen:VehicleAge>16</gen:VehicleAge></gen:VehicleAgeList>]]></con:value>
     </con:property>
     <con:property>
       <con:name>Renewal_New_ProductList_XML</con:name>
-      <con:value>&lt;gen:Product>&lt;prod:ProductCode>&lt;/prod:ProductCode>&lt;/gen:Product></con:value>
+      <con:value><![CDATA[<gen:Product><prod:ProductCode>PRD_UK_0011</prod:ProductCode></gen:Product><gen:Product><prod:ProductCode>PRD_UK_0004</prod:ProductCode></gen:Product><gen:Product><prod:ProductCode>PRD_UK_0018</prod:ProductCode></gen:Product><gen:VehicleAgeList><gen:VehicleAge>8</gen:VehicleAge><gen:VehicleAge>8</gen:VehicleAge><gen:VehicleAge>14</gen:VehicleAge><gen:VehicleAge>16</gen:VehicleAge></gen:VehicleAgeList>]]></con:value>
     </con:property>
     <con:property>
       <con:name>RENEWALCover</con:name>
-      <con:value/>
+      <con:value>1</con:value>
     </con:property>
     <con:property>
       <con:name>PaymentNumber</con:name>
@@ -2421,7 +2421,7 @@ bw.close();</script>
     </con:property>
     <con:property>
       <con:name>TotalOfValuesChecked</con:name>
-      <con:value>179</con:value>
+      <con:value>186</con:value>
     </con:property>
     <con:property>
       <con:name>NumOfIterations</con:name>
@@ -2433,7 +2433,7 @@ bw.close();</script>
     </con:property>
     <con:property>
       <con:name>CurrentPolicyPrice_XML</con:name>
-      <con:value/>
+      <con:value><![CDATA[<gen:Product><prod:ProductCode>PRD_UK_0011</prod:ProductCode><prod:ProductPriceName>Roadside</prod:ProductPriceName><gen:PriceList><prod:PolicyPrice><prod:PriceElementType/><prod:PriceBreakdown><prod:CorePrice><prod:NetRate>0.0</prod:NetRate><prod:NetRateTax>0.0</prod:NetRateTax><prod:Commission>60.69</prod:Commission><prod:CommissionTax>7.28</prod:CommissionTax><prod:InternallyFundedDiscount>0.0</prod:InternallyFundedDiscount><prod:TaxPercentage>0.12</prod:TaxPercentage><prod:TaxTotal>7.28</prod:TaxTotal><prod:Total>67.97</prod:Total></prod:CorePrice><prod:ArrangementFee><prod:Fee>24.96</prod:Fee><prod:FeeTax>0.0</prod:FeeTax><prod:InternallyFundedDiscount>0.0</prod:InternallyFundedDiscount><prod:TaxPercentage>0.12</prod:TaxPercentage><prod:Total>24.96</prod:Total></prod:ArrangementFee><prod:OfferCodeDiscountList><prod:OfferCodeDiscount><prod:Code>SPDR2YPC50</prod:Code><prod:DiscountApplicationApproach>Product</prod:DiscountApplicationApproach><prod:NetRate>0.0</prod:NetRate><prod:NetRateTax>0.0</prod:NetRateTax><prod:Commission>-41.49</prod:Commission><prod:CommissionTax>-4.98</prod:CommissionTax><prod:ArrangementFee>0.0</prod:ArrangementFee><prod:ArrangementFeeTax>0.0</prod:ArrangementFeeTax><prod:InternallyFundedDiscount>0.0</prod:InternallyFundedDiscount><prod:TaxPercentage>0.12</prod:TaxPercentage><prod:Total>-46.47</prod:Total></prod:OfferCodeDiscount></prod:OfferCodeDiscountList><prod:AccountingTotals><prod:CoreDiscountsTotal>-46.47</prod:CoreDiscountsTotal><prod:CoreDiscountsTaxTotal>-4.98</prod:CoreDiscountsTaxTotal><prod:CoreCommissionDiscountsTotal>-41.49</prod:CoreCommissionDiscountsTotal><prod:CoreNetRateDiscountsTotal>0.0</prod:CoreNetRateDiscountsTotal><prod:ArrangementFeeGrandDiscountsTotal>0.0</prod:ArrangementFeeGrandDiscountsTotal><prod:ArrangementFeeTaxDiscountsTotal>0.0</prod:ArrangementFeeTaxDiscountsTotal><prod:ArrangementFeeDiscountsTotal>0.0</prod:ArrangementFeeDiscountsTotal></prod:AccountingTotals></prod:PriceBreakdown><prod:TaxType>I</prod:TaxType><prod:TaxDate>2020-07-10T00:00:00</prod:TaxDate><prod:DateInceptedOnPolicy>2020-07-10T00:00:00</prod:DateInceptedOnPolicy><prod:RelativityPriceFactor>1.0</prod:RelativityPriceFactor><prod:ExtrapolationFactor>1.0</prod:ExtrapolationFactor><prod:ArrangementFeeTotal>24.96</prod:ArrangementFeeTotal><prod:TotalLessArrangementFeeTotal>21.5</prod:TotalLessArrangementFeeTotal><prod:TotalLessDiscounts>92.93</prod:TotalLessDiscounts><prod:Total>46.46</prod:Total></prod:PolicyPrice></gen:PriceList></gen:Product><gen:Product><prod:ProductCode>PRD_UK_0004</prod:ProductCode><prod:ProductPriceName>Relay</prod:ProductPriceName><gen:PriceList><prod:PolicyPrice><prod:PriceElementType/><prod:PriceBreakdown><prod:CorePrice><prod:NetRate>0.0</prod:NetRate><prod:NetRateTax>0.0</prod:NetRateTax><prod:Commission>69.11</prod:Commission><prod:CommissionTax>8.29</prod:CommissionTax><prod:InternallyFundedDiscount>0.0</prod:InternallyFundedDiscount><prod:TaxPercentage>0.12</prod:TaxPercentage><prod:TaxTotal>8.29</prod:TaxTotal><prod:Total>77.4</prod:Total></prod:CorePrice><prod:ArrangementFee><prod:Fee>9.96</prod:Fee><prod:FeeTax>0.0</prod:FeeTax><prod:InternallyFundedDiscount>0.0</prod:InternallyFundedDiscount><prod:TaxPercentage>0.12</prod:TaxPercentage><prod:Total>9.96</prod:Total></prod:ArrangementFee><prod:OfferCodeDiscountList><prod:OfferCodeDiscount><prod:Code>SPDR2YPC50</prod:Code><prod:DiscountApplicationApproach>Product</prod:DiscountApplicationApproach><prod:NetRate>0.0</prod:NetRate><prod:NetRateTax>0.0</prod:NetRateTax><prod:Commission>-39.0</prod:Commission><prod:CommissionTax>-4.68</prod:CommissionTax><prod:ArrangementFee>0.0</prod:ArrangementFee><prod:ArrangementFeeTax>0.0</prod:ArrangementFeeTax><prod:InternallyFundedDiscount>0.0</prod:InternallyFundedDiscount><prod:TaxPercentage>0.12</prod:TaxPercentage><prod:Total>-43.68</prod:Total></prod:OfferCodeDiscount></prod:OfferCodeDiscountList><prod:AccountingTotals><prod:CoreDiscountsTotal>-43.68</prod:CoreDiscountsTotal><prod:CoreDiscountsTaxTotal>-4.68</prod:CoreDiscountsTaxTotal><prod:CoreCommissionDiscountsTotal>-39.0</prod:CoreCommissionDiscountsTotal><prod:CoreNetRateDiscountsTotal>0.0</prod:CoreNetRateDiscountsTotal><prod:ArrangementFeeGrandDiscountsTotal>0.0</prod:ArrangementFeeGrandDiscountsTotal><prod:ArrangementFeeTaxDiscountsTotal>0.0</prod:ArrangementFeeTaxDiscountsTotal><prod:ArrangementFeeDiscountsTotal>0.0</prod:ArrangementFeeDiscountsTotal></prod:AccountingTotals></prod:PriceBreakdown><prod:TaxType>I</prod:TaxType><prod:TaxDate>2020-07-10T00:00:00</prod:TaxDate><prod:DateInceptedOnPolicy>2020-07-10T00:00:00</prod:DateInceptedOnPolicy><prod:RelativityPriceFactor>1.0</prod:RelativityPriceFactor><prod:ExtrapolationFactor>1.0</prod:ExtrapolationFactor><prod:ArrangementFeeTotal>9.96</prod:ArrangementFeeTotal><prod:TotalLessArrangementFeeTotal>33.72</prod:TotalLessArrangementFeeTotal><prod:TotalLessDiscounts>87.36</prod:TotalLessDiscounts><prod:Total>43.68</prod:Total></prod:PolicyPrice></gen:PriceList></gen:Product><gen:Product><prod:ProductCode>PRD_UK_0018</prod:ProductCode><prod:ProductPriceName>BRC</prod:ProductPriceName><gen:PriceList><prod:PolicyPrice><prod:PriceElementType/><prod:PriceBreakdown><prod:CorePrice><prod:NetRate>146.47</prod:NetRate><prod:NetRateTax>17.58</prod:NetRateTax><prod:Commission>131.71</prod:Commission><prod:CommissionTax>15.81</prod:CommissionTax><prod:InternallyFundedDiscount>0.0</prod:InternallyFundedDiscount><prod:TaxPercentage>0.12</prod:TaxPercentage><prod:TaxTotal>33.39</prod:TaxTotal><prod:Total>311.57</prod:Total></prod:CorePrice><prod:ArrangementFee><prod:Fee>9.96</prod:Fee><prod:FeeTax>0.0</prod:FeeTax><prod:InternallyFundedDiscount>0.0</prod:InternallyFundedDiscount><prod:TaxPercentage>0.12</prod:TaxPercentage><prod:Total>9.96</prod:Total></prod:ArrangementFee><prod:AccountingTotals><prod:CoreDiscountsTotal>0.0</prod:CoreDiscountsTotal><prod:CoreDiscountsTaxTotal>0.0</prod:CoreDiscountsTaxTotal><prod:CoreCommissionDiscountsTotal>0.0</prod:CoreCommissionDiscountsTotal><prod:CoreNetRateDiscountsTotal>0.0</prod:CoreNetRateDiscountsTotal><prod:ArrangementFeeGrandDiscountsTotal>0.0</prod:ArrangementFeeGrandDiscountsTotal><prod:ArrangementFeeTaxDiscountsTotal>0.0</prod:ArrangementFeeTaxDiscountsTotal><prod:ArrangementFeeDiscountsTotal>0.0</prod:ArrangementFeeDiscountsTotal></prod:AccountingTotals></prod:PriceBreakdown><prod:TaxType>I</prod:TaxType><prod:TaxDate>2020-07-10T00:00:00</prod:TaxDate><prod:DateInceptedOnPolicy>2020-07-10T00:00:00</prod:DateInceptedOnPolicy><prod:RelativityPriceFactor>1.0</prod:RelativityPriceFactor><prod:ExtrapolationFactor>1.0</prod:ExtrapolationFactor><prod:ArrangementFeeTotal>9.96</prod:ArrangementFeeTotal><prod:TotalLessArrangementFeeTotal>311.57</prod:TotalLessArrangementFeeTotal><prod:TotalLessDiscounts>321.53</prod:TotalLessDiscounts><prod:Total>321.53</prod:Total></prod:PolicyPrice></gen:PriceList></gen:Product>]]></con:value>
     </con:property>
     <con:property>
       <con:name>ID</con:name>

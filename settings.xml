@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="667243f7-2cbf-41c0-b4e9-4d07dbed835f" created="3.0.0" activeEnvironment="Default environment" name="Venus_Renewal_Project" resourceRoot="" compositeProjectFormat="1.3" updated="3.0.0" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="667243f7-2cbf-41c0-b4e9-4d07dbed835f" created="3.0.0" activeEnvironment="Default environment" name="Venus_Renewal_Project" resourceRoot="" compositeProjectFormat="1.3" updated="3.1.0" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="667243f7-2cbf-41c0-b4e9-4d07dbed835ffileName">Venus_Renewal_Project</con:setting>
   </con:settings>
